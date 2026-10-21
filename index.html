@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0d2b54">
+<meta name="description" content="情報処理安全確保支援士(SC)試験の学習用アプリ(非公式・独自問題)">
+<title>SC 直前ドリル</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="appbar">
+  <h1 class="appbar__title">SC 直前ドリル</h1>
+  <span class="appbar__badge">非公式・独自問題</span>
+</header>
+
+<main id="main" class="main">
+  <!-- ホーム -->
+  <section id="view-home" class="view" aria-label="ホーム">
+    <div class="countdown-grid">
+      <div class="countdown card" id="cd-a">
+        <div class="countdown__label">科目A まで</div>
+        <div class="countdown__value" data-cd-value></div>
+        <div class="countdown__date">2026-10-27 09:30 (JST)</div>
+        <div class="countdown__exam">A-1 50分 ／ A-2 40分</div>
+      </div>
+      <div class="countdown card" id="cd-b">
+        <div class="countdown__label">科目B まで</div>
+        <div class="countdown__value" data-cd-value></div>
+        <div class="countdown__date">2026-11-19 09:00 (JST)</div>
+        <div class="countdown__exam">B 150分</div>
+      </div>
+    </div>
+
+    <div class="card home-today">
+      <div class="home-today__item">
+        <span class="home-today__num" id="today-count">0</span>
+        <span class="home-today__cap">今日の回答</span>
+      </div>
+      <div class="home-today__item">
+        <span class="home-today__num" id="today-correct">0</span>
+        <span class="home-today__cap">今日の正答</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card__h">苦手分野トップ3</h2>
+      <ul class="weak-list" id="weak-list"><li class="muted">まだデータがありません。</li></ul>
+    </div>
+
+    <div class="card">
+      <h2 class="card__h">学習を始める</h2>
+      <div class="field">
+        <span class="field__label">モード</span>
+        <div class="seg" id="mode-seg" role="radiogroup" aria-label="モード">
+          <button class="seg__btn is-on" role="radio" aria-checked="true" data-mode="a1">A-1 共通知識</button>
+          <button class="seg__btn" role="radio" aria-checked="false" data-mode="a2">A-2 専門</button>
+          <button class="seg__btn" role="radio" aria-checked="false" data-mode="weak">苦手優先(自動)</button>
+          <button class="seg__btn" role="radio" aria-checked="false" data-mode="review">間違えた問題の復習</button>
+          <button class="seg__btn" role="radio" aria-checked="false" data-mode="all">全問ランダム</button>
+        </div>
+      </div>
+      <div class="field">
+        <span class="field__label">出題数</span>
+        <div class="seg" id="count-seg" role="radiogroup" aria-label="出題数">
+          <button class="seg__btn" role="radio" aria-checked="false" data-count="5">5問</button>
+          <button class="seg__btn is-on" role="radio" aria-checked="true" data-count="10">10問</button>
+          <button class="seg__btn" role="radio" aria-checked="false" data-count="20">20問</button>
+        </div>
+      </div>
+      <p class="mode-note" id="mode-note"></p>
+      <button class="btn btn--primary btn--block" id="start-btn">開始する</button>
+    </div>
+  </section>
+
+  <!-- 出題 -->
+  <section id="view-quiz" class="view" hidden aria-label="出題">
+    <div class="quiz-top">
+      <button class="btn btn--ghost btn--sm" id="quiz-quit">中断</button>
+      <div class="progress">
+        <div class="progress__bar" id="quiz-progress"></div>
+      </div>
+      <span class="quiz-top__count"><span id="q-index">1</span>/<span id="q-total">10</span></span>
+    </div>
+
+    <div class="card quiz-card">
+      <div class="q-meta">
+        <span class="chip" id="q-exam">A-2</span>
+        <span class="chip chip--cat" id="q-cat">カテゴリ</span>
+      </div>
+      <p class="q-text" id="q-text"></p>
+      <div class="choices" id="q-choices"></div>
+    </div>
+
+    <div class="card feedback" id="q-feedback" hidden>
+      <div class="feedback__head" id="fb-head"></div>
+      <div class="feedback__block">
+        <h3 class="feedback__h">解説</h3>
+        <p id="fb-explanation"></p>
+      </div>
+      <div class="feedback__block" id="fb-notes-block" hidden>
+        <h3 class="feedback__h">各選択肢について</h3>
+        <ul id="fb-notes"></ul>
+      </div>
+      <div class="feedback__source" id="fb-source"></div>
+    </div>
+  </section>
+
+  <!-- 結果 -->
+  <section id="view-result" class="view" hidden aria-label="結果">
+    <div class="card result-card">
+      <h2 class="card__h">セッション結果</h2>
+      <div class="result-score">
+        <span class="result-score__num" id="res-correct">0</span>
+        <span class="result-score__sep">/</span>
+        <span class="result-score__num" id="res-total">0</span>
+      </div>
+      <div class="result-rate" id="res-rate">正答率 0%</div>
+      <ul class="result-review" id="res-review"></ul>
+      <button class="btn btn--primary btn--block" id="res-again">同じ設定でもう一度</button>
+      <button class="btn btn--ghost btn--block" id="res-home">ホームへ</button>
+    </div>
+  </section>
+
+  <!-- 教科書(図解カード)一覧 -->
+  <section id="view-textbook" class="view" hidden aria-label="教科書">
+    <div class="tb-intro card">
+      <h2 class="card__h">教科書（図解カード）</h2>
+      <p class="muted" style="font-size:12px;margin:0">1テーマ＝1枚の図。タップで拡大、左右スワイプでめくれます。</p>
+    </div>
+    <div class="tb-filter" id="tb-filter" role="tablist" aria-label="分野で絞り込み">
+      <button class="chip chip--filter is-on" role="tab" aria-selected="true" data-filter="all">全部</button>
+      <button class="chip chip--filter" role="tab" aria-selected="false" data-filter="A-1">A-1</button>
+      <button class="chip chip--filter" role="tab" aria-selected="false" data-filter="A-2">A-2</button>
+      <button class="chip chip--filter" role="tab" aria-selected="false" data-filter="計算">計算</button>
+    </div>
+    <div id="tb-list"></div>
+  </section>
+
+  <!-- 図解カード ビューア -->
+  <section id="view-card" class="view" hidden aria-label="図解カード">
+    <div class="cardview-top">
+      <button class="btn btn--ghost btn--sm" id="cv-back">← 一覧</button>
+      <span class="cardview-top__chapter" id="cv-chapter"></span>
+      <span class="cardview-top__pos" id="cv-pos">1 / 1</span>
+    </div>
+
+    <div class="card cardview" id="cv-swipe">
+      <div class="cardview__meta">
+        <span class="chip" id="cv-cat">A-2</span>
+        <span class="chip chip--cat" id="cv-kind"></span>
+      </div>
+      <h2 class="cardview__title" id="cv-title"></h2>
+      <p class="cardview__essence" id="cv-essence"></p>
+      <div class="cardview__diagram" id="cv-diagram"></div>
+      <div class="cardview__keywords" id="cv-keywords"></div>
+      <div class="cardview__memory" id="cv-memory-wrap">
+        <b>連想</b><span id="cv-memory"></span>
+      </div>
+      <div class="cardview__trap" id="cv-trap-wrap">
+        <b>注意</b><span id="cv-trap"></span>
+      </div>
+      <div class="cardview__source" id="cv-source"></div>
+    </div>
+
+    <div class="cardview-nav">
+      <button class="btn btn--block" id="cv-prev">← 前へ</button>
+      <button class="btn btn--block" id="cv-next">次へ →</button>
+    </div>
+  </section>
+
+  <!-- 統計 -->
+  <section id="view-stats" class="view" hidden aria-label="統計">
+    <div class="card stats-summary">
+      <div class="stats-summary__item">
+        <span class="stats-summary__num" id="st-total">0</span>
+        <span class="stats-summary__cap">総回答数</span>
+      </div>
+      <div class="stats-summary__item">
+        <span class="stats-summary__num" id="st-rate">0%</span>
+        <span class="stats-summary__cap">正答率</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card__h">科目別 正答率</h2>
+      <div id="st-exam-bars"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="card__h">カテゴリ別 正答率</h2>
+      <div id="st-cat-bars"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="card__h">直近7日の回答数</h2>
+      <div class="spark" id="st-week"></div>
+    </div>
+
+    <div class="card">
+      <h2 class="card__h">記録の管理</h2>
+      <button class="btn btn--block" id="st-export">記録をエクスポート(JSON)</button>
+      <button class="btn btn--danger btn--block" id="st-reset">記録をリセット</button>
+    </div>
+  </section>
+</main>
+
+<nav class="tabbar" aria-label="画面切り替え">
+  <button class="tab is-on" data-view="home"><span class="tab__ico">🏠</span>ホーム</button>
+  <button class="tab" data-view="textbook"><span class="tab__ico">📘</span>教科書</button>
+  <button class="tab" data-view="stats"><span class="tab__ico">📊</span>統計</button>
+</nav>
+
+<footer class="disclaimer">
+  非公式。独自問題は過去問ではありません。合格を保証しません。
+</footer>
+
+<div class="modal" id="confirm-modal" hidden role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+  <div class="modal__box">
+    <h3 class="modal__title" id="confirm-title"></h3>
+    <p class="modal__msg" id="confirm-msg"></p>
+    <div class="modal__actions">
+      <button class="btn btn--ghost" id="confirm-cancel">キャンセル</button>
+      <button class="btn btn--danger" id="confirm-ok">実行</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

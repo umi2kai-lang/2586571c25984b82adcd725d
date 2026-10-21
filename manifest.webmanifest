@@ -1,0 +1,16 @@
+{
+  "name": "SC 直前ドリル(非公式)",
+  "short_name": "SCドリル",
+  "description": "情報処理安全確保支援士(SC)試験の学習用アプリ。独自問題・非公式。",
+  "lang": "ja",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f6fa",
+  "theme_color": "#0d2b54",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
