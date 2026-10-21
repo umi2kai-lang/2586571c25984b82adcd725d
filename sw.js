@@ -1,10 +1,12 @@
 /*
  * Service Worker — オフライン対応
- * 静的ファイルはキャッシュ優先(cache-first)。
- * data/questions.json はネットワーク優先(network-first)→失敗時にキャッシュへフォールバック。
- *   日次ドリル問題を追記した最新版を優先しつつ、オフラインでも学習を続けられるようにする。
+ * アプリ本体(index.html / app.js / styles.css)と data/*.json はネットワーク優先
+ * (network-first)。オンライン時は常に最新を取得し、取得できたらキャッシュへ複製する。
+ * オフライン時のみキャッシュへフォールバックする。
+ *   → これにより、Android Chrome 等で古い版が居座る問題を避ける。
+ * その他の静的ファイル(アイコン・manifest 等)はキャッシュ優先(cache-first)。
  */
-var CACHE = 'scapp-v4';
+var CACHE = 'scapp-v5';
 var CORE = [
   './',
   './index.html',
@@ -35,34 +37,48 @@ self.addEventListener('activate', function (e) {
   );
 });
 
+// ネットワーク優先で取得し、成功時はキャッシュへ複製。失敗時はキャッシュへフォールバック。
+function networkFirst(req) {
+  return fetch(req).then(function (res) {
+    if (res && res.ok) {
+      var copy = res.clone();
+      caches.open(CACHE).then(function (c) { c.put(req, copy); }).catch(function () { /* 保存失敗は無視 */ });
+      return res;
+    }
+    // 5xx/4xx 等でも、キャッシュがあればそれを優先して返す(なければ応答そのまま)。
+    return caches.match(req).then(function (hit) { return hit || res; });
+  }).catch(function () {
+    return caches.match(req).then(function (hit) {
+      if (hit) return hit;
+      // ナビゲーション要求のオフライン時は index.html を返す
+      if (req.mode === 'navigate') return caches.match('./index.html');
+      return undefined;
+    });
+  });
+}
+
 self.addEventListener('fetch', function (e) {
   var req = e.request;
   if (req.method !== 'GET') return;
 
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
-  var isQuestions = url.pathname.endsWith('/data/questions.json') || url.pathname.endsWith('data/questions.json');
 
-  if (isQuestions) {
-    // network-first
-    e.respondWith(
-      fetch(req).then(function (res) {
-        if (!res.ok) throw new Error('問題データの取得に失敗しました');
-        var copy = res.clone();
-        return caches.open(CACHE).then(function (c) {
-          return c.put(req, copy);
-        }).catch(function () { /* キャッシュ保存失敗時もオンラインのデータは利用する */ })
-          .then(function () { return res; });
-      }).catch(function () {
-        return caches.match(req).then(function (hit) {
-          return hit || caches.match('./data/questions.json');
-        });
-      })
-    );
+  var p = url.pathname;
+  var isApp = req.mode === 'navigate' ||
+    p === '/' || p.endsWith('/') ||
+    p.endsWith('/index.html') || p.endsWith('index.html') ||
+    p.endsWith('/app.js') || p.endsWith('app.js') ||
+    p.endsWith('/styles.css') || p.endsWith('styles.css') ||
+    /\/data\/[^/]+\.json$/.test(p);
+
+  if (isApp) {
+    // network-first(アプリ本体・データ)。古い版の居座りを防ぐ。
+    e.respondWith(networkFirst(req));
     return;
   }
 
-  // cache-first(静的ファイル)
+  // cache-first(アイコン・manifest 等の静的ファイル)
   e.respondWith(
     caches.match(req).then(function (hit) {
       if (hit) return hit;
@@ -73,7 +89,6 @@ self.addEventListener('fetch', function (e) {
         }
         return res;
       }).catch(function () {
-        // ナビゲーション要求のオフライン時は index.html を返す
         if (req.mode === 'navigate') return caches.match('./index.html');
       });
     })

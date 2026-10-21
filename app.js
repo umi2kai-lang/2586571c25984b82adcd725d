@@ -161,9 +161,23 @@ function bootUI() {
   renderHome();
   showView('home');
 
-  // Service Worker 登録(オフライン対応)
+  // Service Worker 登録(オフライン対応)。
+  // 新しい版が公開されたら即時反映するため、登録後に update() で更新を確認し、
+  // 制御する SW が切り替わったら一度だけリロードする。
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js').catch(function () { /* 失敗は無視 */ });
+    // 初回インストール時(まだ制御SWなし)は clients.claim による controllerchange が
+    // 発火するが、ページは既に最新なのでリロードしない。更新で制御が切り替わった時だけ
+    // 一度リロードして新しい版を確実に反映する。
+    var hadController = !!navigator.serviceWorker.controller;
+    var reloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (!hadController || reloaded) return;  // 初回 or 二重リロードを防止
+      reloaded = true;
+      window.location.reload();
+    });
+    navigator.serviceWorker.register('sw.js').then(function (reg) {
+      try { reg.update(); } catch (e) { /* 失敗は無視 */ }
+    }).catch(function () { /* 失敗は無視 */ });
   }
 }
 
