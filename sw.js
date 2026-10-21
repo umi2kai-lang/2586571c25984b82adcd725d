@@ -4,7 +4,7 @@
  * data/questions.json はネットワーク優先(network-first)→失敗時にキャッシュへフォールバック。
  *   日次ドリル問題を追記した最新版を優先しつつ、オフラインでも学習を続けられるようにする。
  */
-var CACHE = 'scapp-v3';
+var CACHE = 'scapp-v4';
 var CORE = [
   './',
   './index.html',
