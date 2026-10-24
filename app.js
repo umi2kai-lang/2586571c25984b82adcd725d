@@ -581,7 +581,9 @@ function answer(chosen) {
     nb.hidden = true;
   }
 
-  $('#fb-source').textContent = '出典: ' + sourceText(q.source);
+  // ipa-past のラベルは「出典：…」で始まるため二重の接頭辞を避ける。
+  var srcTxt = sourceText(q.source);
+  $('#fb-source').textContent = (srcTxt.indexOf('出典') === 0) ? srcTxt : '出典: ' + srcTxt;
 
   $('#quiz-progress').style.width = ((session.idx + 1) / session.items.length * 100) + '%';
 
