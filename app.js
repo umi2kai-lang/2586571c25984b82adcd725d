@@ -67,7 +67,8 @@ var tb = {
 
 var ui = {
   mode: 'a1',
-  count: 10
+  count: 10,
+  sitting: 'all'   // 過去問モードで選択中の回・区分キー ('all' | 'year|term|section')
 };
 
 var session = null; // { items:[q], idx, correct, answered:[{id,ok,chosen}] }
@@ -127,9 +128,20 @@ function bootUI() {
     b.addEventListener('click', function () {
       setSeg('#mode-seg', b);
       ui.mode = b.dataset.mode;
+      togglePastField();
       updateModeNote();
     });
   });
+  // 過去問の回・区分セレクト
+  populatePastSittings();
+  var pastSel = $('#past-sitting');
+  if (pastSel) {
+    pastSel.addEventListener('change', function () {
+      ui.sitting = pastSel.value;
+      updateModeNote();
+    });
+  }
+  togglePastField();
   // 出題数選択
   $all('#count-seg .seg__btn').forEach(function (b) {
     b.addEventListener('click', function () {
@@ -193,6 +205,7 @@ function updateModeNote() {
   var notes = {
     a1: 'A-1(共通知識)の全分野からランダムに出題します。',
     a2: 'A-2(セキュリティ専門)の全カテゴリからランダムに出題します。',
+    past: '情報処理安全確保支援士試験ほかのIPA公表過去問(出典表示・独自解説)を出題します。回・区分を選ぶとその回を問番号順に通しで出題します。',
     weak: 'カテゴリ別の誤答率や直近の誤り・未回答をもとに、弱点を重み付けして出題します。',
     review: '最後の回答が誤りだった問題だけを出題します。正解すると復習リストから外れます。',
     all: 'A-1・A-2のすべての問題からランダムに出題します。'
@@ -201,6 +214,9 @@ function updateModeNote() {
   if (ui.mode === 'review') {
     var n = reviewPool().length;
     note += ' 現在 ' + n + ' 問。';
+  }
+  if (ui.mode === 'past' && ui.sitting && ui.sitting !== 'all') {
+    note += ' この回は ' + buildPastCount(ui.sitting) + ' 問を通しで出題します。';
   }
   $('#mode-note').textContent = note;
 }
@@ -379,6 +395,58 @@ function weightedSample(pool, weights, k) {
   return picked;
 }
 
+// 過去問(ipa-past)の回・区分一覧を、新しい回が先頭になる順で返す。
+// 返り値: [{ key:'令和7年度|秋期|午前II', year, term, section, label, n }]
+function pastSittings() {
+  var map = {};
+  QUESTIONS.forEach(function (q) {
+    var s = q.source;
+    if (!s || s.type !== 'ipa-past') return;
+    var key = s.year + '|' + s.term + '|' + s.section;
+    if (!map[key]) {
+      map[key] = { key: key, year: s.year, term: s.term, section: s.section, n: 0 };
+    }
+    map[key].n++;
+  });
+  var termRank = { '秋期': 0, '春期': 1 }; // 同一年度内は秋を新しい扱い(先頭)に
+  return Object.keys(map).map(function (k) {
+    var o = map[k];
+    o.label = o.year + ' ' + o.term + ' ' + o.section + '（' + o.n + '問）';
+    return o;
+  }).sort(function (a, b) {
+    if (a.year !== b.year) return a.year < b.year ? 1 : -1; // 年度降順
+    var ra = termRank[a.term] != null ? termRank[a.term] : 9;
+    var rb = termRank[b.term] != null ? termRank[b.term] : 9;
+    if (ra !== rb) return ra - rb;
+    return a.section < b.section ? -1 : 1; // 午前I→午前II
+  });
+}
+
+function populatePastSittings() {
+  var sel = $('#past-sitting');
+  if (!sel) return;
+  // 先頭の「すべて」オプションは残し、以降を差し替える
+  var opts = ['<option value="all">すべての過去問からランダム</option>'];
+  pastSittings().forEach(function (s) {
+    opts.push('<option value="' + escapeHTML(s.key) + '">' + escapeHTML(s.label) + '</option>');
+  });
+  sel.innerHTML = opts.join('');
+  sel.value = ui.sitting;
+  if (sel.value !== ui.sitting) { ui.sitting = 'all'; sel.value = 'all'; }
+}
+
+function buildPastCount(key) {
+  return QUESTIONS.filter(function (q) {
+    var s = q.source;
+    return s && s.type === 'ipa-past' && (s.year + '|' + s.term + '|' + s.section) === key;
+  }).length;
+}
+
+function togglePastField() {
+  var f = $('#past-field');
+  if (f) f.hidden = (ui.mode !== 'past');
+}
+
 function buildItems(mode, count) {
   var pool;
   if (mode === 'a1') {
@@ -394,6 +462,21 @@ function buildItems(mode, count) {
   }
   if (mode === 'review') {
     return shuffle(reviewPool()).slice(0, count);
+  }
+  if (mode === 'past') {
+    pool = QUESTIONS.filter(function (q) { return q.source && q.source.type === 'ipa-past'; });
+    if (ui.sitting && ui.sitting !== 'all') {
+      pool = pool.filter(function (q) {
+        var s = q.source;
+        return (s.year + '|' + s.term + '|' + s.section) === ui.sitting;
+      });
+      // 特定の回を選んだ場合は、その回の全問を問番号順(本番の順)で出題する
+      return pool.slice().sort(function (a, b) {
+        return (a.source.qno || 0) - (b.source.qno || 0);
+      });
+    }
+    // 「すべて」選択時は過去問全体から count 問をランダム出題
+    return shuffle(pool).slice(0, count);
   }
   if (mode === 'weak') {
     pool = QUESTIONS.slice();

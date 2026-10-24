@@ -15,7 +15,7 @@
 <body>
 <header class="appbar">
   <h1 class="appbar__title">SC 直前ドリル</h1>
-  <span class="appbar__badge">非公式・独自問題</span>
+  <span class="appbar__badge">非公式・学習用</span>
 </header>
 
 <main id="main" class="main">
@@ -59,10 +59,17 @@
         <div class="seg" id="mode-seg" role="radiogroup" aria-label="モード">
           <button class="seg__btn is-on" role="radio" aria-checked="true" data-mode="a1">A-1 共通知識</button>
           <button class="seg__btn" role="radio" aria-checked="false" data-mode="a2">A-2 専門</button>
+          <button class="seg__btn" role="radio" aria-checked="false" data-mode="past">過去問(年度別)</button>
           <button class="seg__btn" role="radio" aria-checked="false" data-mode="weak">苦手優先(自動)</button>
           <button class="seg__btn" role="radio" aria-checked="false" data-mode="review">間違えた問題の復習</button>
           <button class="seg__btn" role="radio" aria-checked="false" data-mode="all">全問ランダム</button>
         </div>
+      </div>
+      <div class="field" id="past-field" hidden>
+        <span class="field__label">回・区分</span>
+        <select id="past-sitting" class="select" aria-label="過去問の回・区分">
+          <option value="all">すべての過去問からランダム</option>
+        </select>
       </div>
       <div class="field">
         <span class="field__label">出題数</span>
@@ -216,7 +223,7 @@
 </nav>
 
 <footer class="disclaimer">
-  非公式。独自問題は過去問ではありません。合格を保証しません。
+  非公式の学習用アプリ。過去問はIPA公表問題を出典表示のうえ収録（解説は独自）。独自問題も併載。合格を保証しません。
 </footer>
 
 <div class="modal" id="confirm-modal" hidden role="dialog" aria-modal="true" aria-labelledby="confirm-title">

@@ -122,6 +122,8 @@ body {
 #count-seg .seg__btn { flex-basis: 0; }
 .seg__btn.is-on { background: var(--navy); color: #fff; border-color: var(--navy); font-weight: 700; }
 .mode-note { font-size: 12px; color: var(--muted); min-height: 1.2em; margin: 2px 0 10px; }
+.select { width: 100%; padding: 10px; font-size: 14px; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); -webkit-appearance: none; appearance: none; }
+.select:focus { outline: 2px solid var(--navy); outline-offset: 1px; }
 
 /* Buttons */
 .btn {
