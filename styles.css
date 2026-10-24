@@ -188,6 +188,22 @@ body {
 .choice.is-wrong .choice__key { background: var(--ng); color: #fff; }
 .choice:disabled { cursor: default; }
 
+/* 設問・選択肢の図版 */
+.q-figure { margin: 0 0 14px; display: flex; flex-direction: column; gap: 10px; }
+.q-figure[hidden] { display: none; }
+.qimg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  cursor: zoom-in;
+}
+.q-figure .qimg { align-self: flex-start; }
+.choice__fig { flex: 1 1 auto; min-width: 0; }
+.choice__fig .qimg { max-height: 160px; width: auto; max-width: 100%; }
+
 /* Feedback */
 .feedback__head { font-size: 17px; font-weight: 800; margin-bottom: 10px; }
 .feedback__head.ok { color: var(--ok); }
@@ -198,6 +214,16 @@ body {
 .feedback #fb-notes { margin: 0; padding-left: 18px; font-size: 13px; }
 .feedback #fb-notes li { margin-bottom: 5px; }
 .feedback__source { font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; }
+.feedback__own { font-size: 10px; font-weight: 700; color: var(--accent); background: #f0e6ee; border-radius: 999px; padding: 1px 7px; vertical-align: middle; }
+
+/* 図版の全画面拡大オーバーレイ */
+.imgzoom { position: fixed; inset: 0; z-index: 100; background: rgba(13, 43, 84, 0.92); display: flex; flex-direction: column; }
+.imgzoom[hidden] { display: none; }
+.imgzoom__scroll { flex: 1 1 auto; overflow: auto; -webkit-overflow-scrolling: touch; touch-action: pinch-zoom; display: flex; align-items: center; justify-content: center; padding: 12px; }
+.imgzoom__img { max-width: 100%; height: auto; background: #fff; border-radius: 6px; }
+.imgzoom__close { position: absolute; top: 10px; right: 12px; width: 40px; height: 40px; border-radius: 50%; border: none; background: rgba(255,255,255,0.9); color: var(--navy); font-size: 24px; line-height: 1; font-weight: 700; cursor: pointer; z-index: 1; }
+.imgzoom__hint { margin: 0; padding: 8px 12px calc(8px + env(safe-area-inset-bottom)); text-align: center; color: #fff; font-size: 11px; opacity: 0.85; }
+.noscroll { overflow: hidden; }
 
 /* sticky next button inside quiz feedback */
 .next-wrap {

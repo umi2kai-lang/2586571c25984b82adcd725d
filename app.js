@@ -169,6 +169,9 @@ function bootUI() {
   // モーダル
   $('#confirm-cancel').addEventListener('click', closeDialog);
 
+  // 図版の全画面拡大
+  setupImageZoom();
+
   updateModeNote();
   renderHome();
   showView('home');
@@ -514,13 +517,25 @@ function renderQuestion() {
   $('#q-cat').textContent = q.category;
   $('#q-text').textContent = q.question;
 
+  // 設問の図版(図・表・数式・プログラム)。IPA公式PDFから切り出した画像を表示する。
+  renderFigures($('#q-figure'), q.image);
+
   var box = $('#q-choices');
   box.innerHTML = '';
+  var choiceImgs = Array.isArray(q.choiceImages) ? q.choiceImages : null;
   q.choices.forEach(function (c, i) {
     var btn = document.createElement('button');
     btn.className = 'choice';
     btn.type = 'button';
-    btn.innerHTML = '<span class="choice__key">' + CHOICE_KEYS[i] + '</span><span>' + escapeHTML(c) + '</span>';
+    var body = '<span class="choice__key">' + CHOICE_KEYS[i] + '</span>';
+    if (choiceImgs && choiceImgs[i]) {
+      // 選択肢自体が図・数式の場合は画像で表示する。
+      body += '<span class="choice__fig"><img class="qimg" src="' + escapeHTML(choiceImgs[i]) +
+        '" alt="選択肢' + CHOICE_KEYS[i] + 'の図" loading="lazy"></span>';
+    } else {
+      body += '<span>' + escapeHTML(c) + '</span>';
+    }
+    btn.innerHTML = body;
     btn.addEventListener('click', function () { answer(i); });
     box.appendChild(btn);
   });
@@ -533,7 +548,7 @@ function feedbackSkeleton() {
   // renderQuestion で毎回クリアするため、固定の内側HTMLを再設定
   return '' +
     '<div class="feedback__head" id="fb-head"></div>' +
-    '<div class="feedback__block"><h3 class="feedback__h">解説</h3><p id="fb-explanation"></p></div>' +
+    '<div class="feedback__block"><h3 class="feedback__h">解説 <span class="feedback__own">独自作成</span></h3><p id="fb-explanation"></p></div>' +
     '<div class="feedback__block" id="fb-notes-block" hidden><h3 class="feedback__h">各選択肢について</h3><ul id="fb-notes"></ul></div>' +
     '<div class="feedback__source" id="fb-source"></div>' +
     '<div class="next-wrap"><button class="btn btn--primary btn--block" id="fb-next">次へ</button></div>';
@@ -909,6 +924,69 @@ function renderCard() {
   $('#cv-next').disabled = (tb.idx >= tb.list.length - 1);
 
   window.scrollTo(0, 0);
+}
+
+/* ===== 図版表示・拡大 ===== */
+
+// 設問の図版コンテナに画像を描画する。paths は文字列または配列、無ければ非表示。
+function renderFigures(el, paths) {
+  if (!el) return;
+  var list = !paths ? [] : (Array.isArray(paths) ? paths : [paths]);
+  if (!list.length) {
+    el.hidden = true;
+    el.innerHTML = '';
+    return;
+  }
+  el.hidden = false;
+  el.innerHTML = list.map(function (p) {
+    return '<img class="qimg" src="' + escapeHTML(p) + '" alt="設問の図" loading="lazy">';
+  }).join('');
+}
+
+// タップで図版を全画面表示（ブラウザのピンチズーム可）。
+// 選択肢の図は、未回答の間はタップ＝選択なので拡大しない（回答後は拡大できる）。
+function setupImageZoom() {
+  document.addEventListener('click', function (e) {
+    var img = e.target.closest ? e.target.closest('.qimg') : null;
+    if (!img) return;
+    var ch = img.closest('.choice');
+    if (ch && !ch.disabled) return; // 未回答の選択肢はまず選択を優先
+    e.preventDefault();
+    e.stopPropagation();
+    openImageZoom(img.getAttribute('src'), img.getAttribute('alt') || '図');
+  }, true);
+
+  var ov = $('#imgzoom');
+  if (ov) {
+    $('#imgzoom-close').addEventListener('click', closeImageZoom);
+    ov.addEventListener('click', function (e) {
+      // 背景(画像以外)のタップで閉じる
+      if (e.target === ov || e.target.id === 'imgzoom-scroll') closeImageZoom();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !ov.hidden) closeImageZoom();
+    });
+  }
+}
+
+function openImageZoom(src, alt) {
+  var ov = $('#imgzoom');
+  var img = $('#imgzoom-img');
+  if (!ov || !img) return;
+  img.src = src;
+  img.alt = alt || '図';
+  var sc = $('#imgzoom-scroll');
+  if (sc) { sc.scrollTop = 0; sc.scrollLeft = 0; }
+  ov.hidden = false;
+  document.body.classList.add('noscroll');
+}
+
+function closeImageZoom() {
+  var ov = $('#imgzoom');
+  if (!ov) return;
+  ov.hidden = true;
+  $('#imgzoom-img').src = '';
+  document.body.classList.remove('noscroll');
 }
 
 /* ===== 小道具 ===== */

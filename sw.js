@@ -6,7 +6,7 @@
  *   → これにより、Android Chrome 等で古い版が居座る問題を避ける。
  * その他の静的ファイル(アイコン・manifest 等)はキャッシュ優先(cache-first)。
  */
-var CACHE = 'scapp-v6';
+var CACHE = 'scapp-v7';
 var CORE = [
   './',
   './index.html',
@@ -78,7 +78,11 @@ self.addEventListener('fetch', function (e) {
     return;
   }
 
-  // cache-first(アイコン・manifest 等の静的ファイル)
+  // 設問の図版(data/img/*.webp 等)はファイル名が問題ごとに固有(不変)なので、
+  // 実行時キャッシュ(cache-first)で配信する。初回表示後はオフラインでも閲覧可能。
+  // 以降の cache-first 分岐がアイコン・manifest と同様にこれを処理する。
+
+  // cache-first(図版・アイコン・manifest 等の静的ファイル)
   e.respondWith(
     caches.match(req).then(function (hit) {
       if (hit) return hit;
