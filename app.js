@@ -18,6 +18,8 @@ var EXAMS = {
 var LS = 'scapp.v1.';
 var K_RECORDS = LS + 'records'; // { [id]: { a:試行数, c:正解数, last:'o'|'x', at:ms } }
 var K_DAILY = LS + 'daily';     // { 'YYYY-MM-DD': { n:回答数, c:正答数 } }
+var K_HINDO_SHOWN = LS + 'hindoShown'; // { [id]: 最後に頻出順で選出した時刻(ms) }
+var HINDO_TOPIC_LIMIT = 20;
 
 var CHOICE_KEYS = ['ア', 'イ', 'ウ', 'エ'];
 
@@ -57,6 +59,7 @@ var QById = {};
 var CARDS = [];        // 教科書(図解カード)。cards.json から読込
 var records = loadJSON(K_RECORDS, {});
 var daily = loadJSON(K_DAILY, {});
+var hindoShown = loadJSON(K_HINDO_SHOWN, {});
 
 // 教科書ビューアの状態
 var tb = {
@@ -288,7 +291,7 @@ function updateModeNote() {
     a1: 'A-1(共通知識)の全分野からランダムに出題します。',
     a2: 'A-2(セキュリティ専門)の全カテゴリからランダムに出題します。',
     past: '情報処理安全確保支援士試験ほかのIPA公表過去問(出典表示・独自解説)を出題します。回・区分を選ぶとその回を問番号順に通しで出題します。',
-    hindo: 'IPA過去問(H29春〜R7秋の全12回)を論点ごとに集計し、出題回数と新しさで順位付けした「頻出順」で出題します。上位論点から、再出題の多い代表問題を先に出します。各問に論点名と「全12回中△回出題」を表示します。統計であり出題を保証するものではありません。',
+    hindo: 'IPA過去問(H29春〜R7秋の全12回)の出題回数と新しさで順位付けした上位20論点（全12回中2回以上出題）の全問題から抽選します。未出題・最後の出題や回答が古い問題を優先し、同じ条件ではランダムに選びます。各問に論点名と出題回数を表示します。統計であり出題を保証するものではありません。',
     weak: 'カテゴリ別の誤答率や直近の誤り・未回答をもとに、弱点を重み付けして出題します。',
     review: '最後の回答が誤りだった問題だけを出題します。正解すると復習リストから外れます。',
     all: 'A-1・A-2のすべての問題からランダムに出題します。'
@@ -304,9 +307,7 @@ function updateModeNote() {
   if (ui.mode === 'hindo' && HINDO) {
     var sec = HINDO.sections[ui.hexam];
     var n = sec ? hindoOrder(ui.hexam).length : 0;
-    // 出題対象はカットオフ(S≥2)を満たす論点のみ。全論点数はランキング画面で確認できる。
-    var tn = sec ? (typeof sec.quizTopics === 'number' ? sec.quizTopics
-      : sec.topics.filter(function (t) { return t.S >= 2; }).length) : 0;
+    var tn = hindoTopics(ui.hexam).length;
     note += ' 現在 ' + ui.hexam + ' は ' + tn + ' 論点・' + n + ' 問が対象です（頻出タブで全論点のランキングを確認できます）。';
   }
   $('#mode-note').textContent = note;
@@ -543,11 +544,25 @@ function toggleModeFields() {
   if (hf) hf.hidden = (ui.mode !== 'hindo');
 }
 
-// 頻出順の出題順(上位論点→代表問題)のうち、実際に手元のプールに存在する問だけを返す。
-// 書籍データが無い環境では該当IDが存在しないため、自動的にその分は除かれる。
-function hindoOrder(exam) {
+// 区分ごとに S>=2 の論点を順位順に上位20件選ぶ。ランキング画面は引き続き全論点。
+function hindoTopics(exam) {
   if (!HINDO || !HINDO.sections[exam]) return [];
-  return (HINDO.sections[exam].order || []).filter(function (id) { return !!QById[id]; });
+  return HINDO.sections[exam].topics.filter(function (t) { return t.S >= 2; })
+    .slice().sort(function (a, b) { return a.rank - b.rank; }).slice(0, HINDO_TOPIC_LIMIT);
+}
+
+// 代表問題だけに絞らず、対象論点に属する手元の全問題を返す（特典データ無しにも対応）。
+function hindoOrder(exam) {
+  var topics = hindoTopics(exam).map(function (t) { return t.topic; });
+  return QUESTIONS.filter(function (q) {
+    var info = HINDO && HINDO.qinfo[q.id];
+    return q.exam === exam && info && info.exam === exam && info.S >= 2 && topics.indexOf(info.topic) >= 0;
+  }).map(function (q) { return q.id; });
+}
+
+function hindoLastUsed(id) {
+  var r = records[id];
+  return Math.max(hindoShown[id] || 0, (r && r.at) || 0);
 }
 
 function buildItems(mode, count) {
@@ -582,9 +597,10 @@ function buildItems(mode, count) {
     return shuffle(pool).slice(0, count);
   }
   if (mode === 'hindo') {
-    // 上位論点から、代表問題(再出題の多い順)で、重複なく count 問を通しで出題する。
-    var ids = hindoOrder(ui.hexam);
-    return ids.slice(0, count).map(function (id) { return QById[id]; });
+    // まずシャッフルし、未出題→古い出題/回答の順に安定ソート。同時刻内は毎回ランダム。
+    var ids = shuffle(hindoOrder(ui.hexam));
+    ids.sort(function (a, b) { return hindoLastUsed(a) - hindoLastUsed(b); });
+    return shuffle(ids.slice(0, count)).map(function (id) { return QById[id]; });
   }
   if (mode === 'weak') {
     pool = QUESTIONS.slice();
@@ -608,6 +624,12 @@ function startSession() {
     return;
   }
   session = { items: items, idx: 0, correct: 0, answered: [] };
+  if (ui.mode === 'hindo') {
+    // 開始時に選出済みとして保存し、中断・再読込しても同じ組合せが続くのを防ぐ。
+    var selectedAt = Date.now();
+    items.forEach(function (q) { hindoShown[q.id] = selectedAt; });
+    saveJSON(K_HINDO_SHOWN, hindoShown);
+  }
   showView('quiz');
   renderQuestion();
 }
@@ -885,8 +907,10 @@ function exportRecords() {
 function resetRecords() {
   records = {};
   daily = {};
+  hindoShown = {};
   localStorage.removeItem(K_RECORDS);
   localStorage.removeItem(K_DAILY);
+  localStorage.removeItem(K_HINDO_SHOWN);
   closeDialog();
   renderStats();
 }
