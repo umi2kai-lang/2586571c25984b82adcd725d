@@ -68,8 +68,13 @@ var tb = {
 var ui = {
   mode: 'a1',
   count: 10,
-  sitting: 'all'   // 過去問モードで選択中の回・区分キー ('all' | 'year|term|section')
+  sitting: 'all',  // 過去問モードで選択中の回・区分キー ('all' | 'year|term|section')
+  hexam: 'A-2'     // 頻出順モードで選択中の区分 ('A-1' | 'A-2')
 };
+
+// 頻出順データ(購入者特典由来のため gitignore 配下)。data/hindo-private.json から任意読込。
+// { totalSessions, recentSessions, formula, cutoff, sections:{ 'A-1'|'A-2':{ topics[], order[] } }, qinfo:{ id:{topic,S,rank,label,exam} } }
+var HINDO = null;
 
 var session = null; // { items:[q], idx, correct, answered:[{id,ok,chosen}] }
 
@@ -85,6 +90,9 @@ function init() {
       QUESTIONS = (data && data.questions) || [];
       QUESTIONS.forEach(function (q) { QById[q.id] = q; });
       return loadBookPrivate();
+    })
+    .then(function () {
+      return loadHindoPrivate();
     })
     .then(function () {
       return loadCards();
@@ -130,6 +138,20 @@ function loadBookPrivate() {
     });
 }
 
+// 頻出順データ(購入者特典由来・任意)を読み込む。無い(404)・失敗時は静かにスキップし、
+// 「頻出順」モードは提示しない(本体の396問アプリは通常どおり動作する)。
+function loadHindoPrivate() {
+  return fetch('data/hindo-private.json', { cache: 'no-store' })
+    .then(function (r) {
+      if (!r.ok) throw new Error('hindo ' + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      if (data && data.sections && data.qinfo) HINDO = data;
+    })
+    .catch(function () { HINDO = null; });
+}
+
 // 教科書カードを読み込む。失敗してもドリル本体は使えるよう、常に解決する。
 function loadCards() {
   return fetch('data/cards.json', { cache: 'no-store' })
@@ -157,12 +179,16 @@ function bootUI() {
   // 教科書(図解カード)
   setupTextbook();
 
+  // 頻出順データがあるときだけ「頻出順」モードを提示する。
+  var hindoBtn = $('#mode-hindo');
+  if (hindoBtn && HINDO) hindoBtn.hidden = false;
+
   // モード選択
   $all('#mode-seg .seg__btn').forEach(function (b) {
     b.addEventListener('click', function () {
       setSeg('#mode-seg', b);
       ui.mode = b.dataset.mode;
-      togglePastField();
+      toggleModeFields();
       updateModeNote();
     });
   });
@@ -175,7 +201,15 @@ function bootUI() {
       updateModeNote();
     });
   }
-  togglePastField();
+  // 頻出順の区分セレクト(A-1 / A-2)
+  $all('#hindo-seg .seg__btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      setSeg('#hindo-seg', b);
+      ui.hexam = b.dataset.hexam;
+      updateModeNote();
+    });
+  });
+  toggleModeFields();
   // 出題数選択
   $all('#count-seg .seg__btn').forEach(function (b) {
     b.addEventListener('click', function () {
@@ -243,6 +277,7 @@ function updateModeNote() {
     a1: 'A-1(共通知識)の全分野からランダムに出題します。',
     a2: 'A-2(セキュリティ専門)の全カテゴリからランダムに出題します。',
     past: '情報処理安全確保支援士試験ほかのIPA公表過去問(出典表示・独自解説)を出題します。回・区分を選ぶとその回を問番号順に通しで出題します。',
+    hindo: 'IPA過去問(H29春〜R7秋の全12回)を論点ごとに集計し、出題回数と新しさで順位付けした「頻出順」で出題します。上位論点から、再出題の多い代表問題を先に出します。各問に論点名と「全12回中△回出題」を表示します。統計であり出題を保証するものではありません。',
     weak: 'カテゴリ別の誤答率や直近の誤り・未回答をもとに、弱点を重み付けして出題します。',
     review: '最後の回答が誤りだった問題だけを出題します。正解すると復習リストから外れます。',
     all: 'A-1・A-2のすべての問題からランダムに出題します。'
@@ -254,6 +289,12 @@ function updateModeNote() {
   }
   if (ui.mode === 'past' && ui.sitting && ui.sitting !== 'all') {
     note += ' この回は ' + buildPastCount(ui.sitting) + ' 問を通しで出題します。';
+  }
+  if (ui.mode === 'hindo' && HINDO) {
+    var sec = HINDO.sections[ui.hexam];
+    var n = sec ? hindoOrder(ui.hexam).length : 0;
+    var tn = sec ? sec.topics.length : 0;
+    note += ' 現在 ' + ui.hexam + ' は ' + tn + ' 論点・' + n + ' 問が対象です。';
   }
   $('#mode-note').textContent = note;
 }
@@ -479,9 +520,18 @@ function buildPastCount(key) {
   }).length;
 }
 
-function togglePastField() {
-  var f = $('#past-field');
-  if (f) f.hidden = (ui.mode !== 'past');
+function toggleModeFields() {
+  var pf = $('#past-field');
+  if (pf) pf.hidden = (ui.mode !== 'past');
+  var hf = $('#hindo-field');
+  if (hf) hf.hidden = (ui.mode !== 'hindo');
+}
+
+// 頻出順の出題順(上位論点→代表問題)のうち、実際に手元のプールに存在する問だけを返す。
+// 書籍データが無い環境では該当IDが存在しないため、自動的にその分は除かれる。
+function hindoOrder(exam) {
+  if (!HINDO || !HINDO.sections[exam]) return [];
+  return (HINDO.sections[exam].order || []).filter(function (id) { return !!QById[id]; });
 }
 
 function buildItems(mode, count) {
@@ -514,6 +564,11 @@ function buildItems(mode, count) {
     }
     // 「すべて」選択時は過去問全体から count 問をランダム出題
     return shuffle(pool).slice(0, count);
+  }
+  if (mode === 'hindo') {
+    // 上位論点から、代表問題(再出題の多い順)で、重複なく count 問を通しで出題する。
+    var ids = hindoOrder(ui.hexam);
+    return ids.slice(0, count).map(function (id) { return QById[id]; });
   }
   if (mode === 'weak') {
     pool = QUESTIONS.slice();
@@ -550,6 +605,19 @@ function renderQuestion() {
   $('#q-exam').textContent = q.exam;
   $('#q-cat').textContent = q.category;
   $('#q-text').textContent = q.question;
+
+  // 頻出順モードでは、論点名と「全12回中△回出題」を表示する。
+  var hchip = $('#q-hindo');
+  if (hchip) {
+    var info = (ui.mode === 'hindo' && HINDO) ? HINDO.qinfo[q.id] : null;
+    if (info) {
+      hchip.textContent = '頻出' + info.rank + '位 ' + info.topic + '（' + info.label + '）';
+      hchip.hidden = false;
+    } else {
+      hchip.hidden = true;
+      hchip.textContent = '';
+    }
+  }
 
   // 設問の図版(図・表・数式・プログラム)。IPA公式PDFから切り出した画像を表示する。
   renderFigures($('#q-figure'), q.image);

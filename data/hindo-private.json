@@ -1,0 +1,6282 @@
+{
+ "version": 1,
+ "totalSessions": 12,
+ "recentSessions": 6,
+ "formula": "Score = 55×(S/12) + 35×(R/6) + 10×reuse  (S=全12回中の出題回数, R=直近3年R5〜R7の6回中の出題回数, reuse=ほぼ同一問題の再出題があれば1)",
+ "cutoff": "出題回数 S≥2（1回のみ出題の論点は除外）。自動推定カテゴリは不使用、問題文＋正解選択肢のキーワードで分類。",
+ "sections": {
+  "A-1": {
+   "topics": [
+    {
+     "rank": 1,
+     "topic": "セキュリティ(暗号・認証・攻撃)",
+     "S": 12,
+     "R": 6,
+     "totalQ": 48,
+     "recentQ": 24,
+     "reuse": true,
+     "score": 100.0,
+     "label": "全12回中12回出題",
+     "repYears": [
+      "R5春",
+      "R4春",
+      "R3春",
+      "R元秋",
+      "H31春",
+      "H30春"
+     ]
+    },
+    {
+     "rank": 2,
+     "topic": "システム監査・内部統制",
+     "S": 11,
+     "R": 6,
+     "totalQ": 19,
+     "recentQ": 11,
+     "reuse": true,
+     "score": 95.4,
+     "label": "全12回中11回出題",
+     "repYears": [
+      "R5春",
+      "R3春",
+      "R元秋",
+      "H30春",
+      "R7秋",
+      "R7秋"
+     ]
+    },
+    {
+     "rank": 3,
+     "topic": "アルゴリズム・計算量・データ構造",
+     "S": 11,
+     "R": 6,
+     "totalQ": 15,
+     "recentQ": 9,
+     "reuse": true,
+     "score": 95.4,
+     "label": "全12回中11回出題",
+     "repYears": [
+      "R7春",
+      "R3春",
+      "R7秋",
+      "R7秋",
+      "R7春",
+      "R6秋"
+     ]
+    },
+    {
+     "rank": 4,
+     "topic": "ネットワーク(TCP/IP等)",
+     "S": 12,
+     "R": 6,
+     "totalQ": 20,
+     "recentQ": 12,
+     "reuse": false,
+     "score": 90.0,
+     "label": "全12回中12回出題",
+     "repYears": [
+      "R7秋",
+      "R7春",
+      "R7春",
+      "R6秋",
+      "R6秋",
+      "R6春"
+     ]
+    },
+    {
+     "rank": 5,
+     "topic": "プロジェクトマネジメント",
+     "S": 11,
+     "R": 5,
+     "totalQ": 22,
+     "recentQ": 10,
+     "reuse": true,
+     "score": 89.6,
+     "label": "全12回中11回出題",
+     "repYears": [
+      "R7秋",
+      "R5秋",
+      "R3春",
+      "H31春",
+      "H29春",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 6,
+     "topic": "経営戦略・競争戦略",
+     "S": 11,
+     "R": 5,
+     "totalQ": 17,
+     "recentQ": 7,
+     "reuse": true,
+     "score": 89.6,
+     "label": "全12回中11回出題",
+     "repYears": [
+      "R7秋",
+      "R5秋",
+      "R5春",
+      "R元秋",
+      "R7秋",
+      "R7春"
+     ]
+    },
+    {
+     "rank": 7,
+     "topic": "システム構成・信頼性・性能",
+     "S": 10,
+     "R": 6,
+     "totalQ": 13,
+     "recentQ": 9,
+     "reuse": false,
+     "score": 80.8,
+     "label": "全12回中10回出題",
+     "repYears": [
+      "R7秋",
+      "R7春",
+      "R7春",
+      "R6秋",
+      "R6秋",
+      "R6春"
+     ]
+    },
+    {
+     "rank": 8,
+     "topic": "IoT・組込み・制御",
+     "S": 9,
+     "R": 6,
+     "totalQ": 11,
+     "recentQ": 7,
+     "reuse": false,
+     "score": 76.2,
+     "label": "全12回中9回出題",
+     "repYears": [
+      "R7秋",
+      "R7春",
+      "R6秋",
+      "R6春",
+      "R6春",
+      "R5秋"
+     ]
+    },
+    {
+     "rank": 9,
+     "topic": "確率・統計・数学",
+     "S": 9,
+     "R": 4,
+     "totalQ": 16,
+     "recentQ": 8,
+     "reuse": true,
+     "score": 74.6,
+     "label": "全12回中9回出題",
+     "repYears": [
+      "R5春",
+      "R3春",
+      "R7秋",
+      "R7秋",
+      "R6春",
+      "R6春"
+     ]
+    },
+    {
+     "rank": 10,
+     "topic": "システム戦略・企画(RFP/BPR)",
+     "S": 9,
+     "R": 4,
+     "totalQ": 12,
+     "recentQ": 6,
+     "reuse": true,
+     "score": 74.6,
+     "label": "全12回中9回出題",
+     "repYears": [
+      "R3春",
+      "H30春",
+      "H29春",
+      "R7秋",
+      "R6秋",
+      "R5秋"
+     ]
+    },
+    {
+     "rank": 11,
+     "topic": "データベース",
+     "S": 10,
+     "R": 4,
+     "totalQ": 31,
+     "recentQ": 5,
+     "reuse": false,
+     "score": 69.2,
+     "label": "全12回中10回出題",
+     "repYears": [
+      "R7秋",
+      "R7春",
+      "R7春",
+      "R6春",
+      "R5春",
+      "R4春"
+     ]
+    },
+    {
+     "rank": 12,
+     "topic": "標準化・関連法規",
+     "S": 9,
+     "R": 4,
+     "totalQ": 12,
+     "recentQ": 5,
+     "reuse": false,
+     "score": 64.6,
+     "label": "全12回中9回出題",
+     "repYears": [
+      "R7秋",
+      "R7秋",
+      "R6秋",
+      "R5秋",
+      "R5春",
+      "R4春"
+     ]
+    },
+    {
+     "rank": 13,
+     "topic": "サービスマネジメント・ITIL・BCP",
+     "S": 8,
+     "R": 3,
+     "totalQ": 10,
+     "recentQ": 3,
+     "reuse": true,
+     "score": 64.2,
+     "label": "全12回中8回出題",
+     "repYears": [
+      "R7秋",
+      "H29春",
+      "R7春",
+      "R6春",
+      "R4春",
+      "R元秋"
+     ]
+    },
+    {
+     "rank": 14,
+     "topic": "ソフトウェア設計・オブジェクト指向・UML",
+     "S": 6,
+     "R": 4,
+     "totalQ": 6,
+     "recentQ": 4,
+     "reuse": true,
+     "score": 60.8,
+     "label": "全12回中6回出題",
+     "repYears": [
+      "R4春",
+      "R7秋",
+      "R6秋",
+      "R6春",
+      "R5春",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 15,
+     "topic": "会計・財務",
+     "S": 8,
+     "R": 4,
+     "totalQ": 11,
+     "recentQ": 6,
+     "reuse": false,
+     "score": 60.0,
+     "label": "全12回中8回出題",
+     "repYears": [
+      "R7秋",
+      "R7秋",
+      "R7春",
+      "R6春",
+      "R5春",
+      "R5春"
+     ]
+    },
+    {
+     "rank": 16,
+     "topic": "開発プロセス・アジャイル・テスト",
+     "S": 9,
+     "R": 3,
+     "totalQ": 12,
+     "recentQ": 5,
+     "reuse": false,
+     "score": 58.8,
+     "label": "全12回中9回出題",
+     "repYears": [
+      "R7春",
+      "R7春",
+      "R7春",
+      "R6春",
+      "R5春",
+      "R4春"
+     ]
+    },
+    {
+     "rank": 17,
+     "topic": "画像・音声・メディア処理",
+     "S": 6,
+     "R": 5,
+     "totalQ": 7,
+     "recentQ": 6,
+     "reuse": false,
+     "score": 56.7,
+     "label": "全12回中6回出題",
+     "repYears": [
+      "R7春",
+      "R6秋",
+      "R6春",
+      "R6春",
+      "R5秋",
+      "R5春"
+     ]
+    },
+    {
+     "rank": 18,
+     "topic": "論理演算・集合・ブール代数",
+     "S": 7,
+     "R": 4,
+     "totalQ": 8,
+     "recentQ": 4,
+     "reuse": false,
+     "score": 55.4,
+     "label": "全12回中7回出題",
+     "repYears": [
+      "R7秋",
+      "R6春",
+      "R5秋",
+      "R5春",
+      "R3春",
+      "R3春"
+     ]
+    },
+    {
+     "rank": 19,
+     "topic": "新技術・デジタル(IoT/DX/BC)",
+     "S": 6,
+     "R": 4,
+     "totalQ": 7,
+     "recentQ": 5,
+     "reuse": false,
+     "score": 50.8,
+     "label": "全12回中6回出題",
+     "repYears": [
+      "R7春",
+      "R6秋",
+      "R6春",
+      "R5秋",
+      "R5秋",
+      "R4春"
+     ]
+    },
+    {
+     "rank": 20,
+     "topic": "プロセッサ・CPUアーキテクチャ",
+     "S": 5,
+     "R": 4,
+     "totalQ": 5,
+     "recentQ": 4,
+     "reuse": false,
+     "score": 46.2,
+     "label": "全12回中5回出題",
+     "repYears": [
+      "R7秋",
+      "R7春",
+      "R5秋",
+      "R5春",
+      "H31春"
+     ]
+    },
+    {
+     "rank": 21,
+     "topic": "基数変換・数値表現・誤差",
+     "S": 5,
+     "R": 4,
+     "totalQ": 5,
+     "recentQ": 4,
+     "reuse": false,
+     "score": 46.2,
+     "label": "全12回中5回出題",
+     "repYears": [
+      "R7春",
+      "R6春",
+      "R5秋",
+      "R5春",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 22,
+     "topic": "ネットワーク応用・モバイル(DNS/HTTP/5G)",
+     "S": 5,
+     "R": 2,
+     "totalQ": 5,
+     "recentQ": 2,
+     "reuse": true,
+     "score": 44.6,
+     "label": "全12回中5回出題",
+     "repYears": [
+      "R3春",
+      "H30春",
+      "R6春",
+      "R5春",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 23,
+     "topic": "AI・機械学習",
+     "S": 4,
+     "R": 4,
+     "totalQ": 7,
+     "recentQ": 7,
+     "reuse": false,
+     "score": 41.7,
+     "label": "全12回中4回出題",
+     "repYears": [
+      "R7秋",
+      "R7春",
+      "R7春",
+      "R7春",
+      "R7春",
+      "R6秋"
+     ]
+    },
+    {
+     "rank": 24,
+     "topic": "技術戦略・イノベーション(MOT)",
+     "S": 4,
+     "R": 3,
+     "totalQ": 4,
+     "recentQ": 3,
+     "reuse": false,
+     "score": 35.8,
+     "label": "全12回中4回出題",
+     "repYears": [
+      "R6秋",
+      "R6春",
+      "R5秋",
+      "H31春"
+     ]
+    },
+    {
+     "rank": 25,
+     "topic": "生産管理・品質管理(QC)",
+     "S": 3,
+     "R": 2,
+     "totalQ": 3,
+     "recentQ": 2,
+     "reuse": true,
+     "score": 35.4,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R5秋",
+      "R6秋",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 26,
+     "topic": "メモリ・キャッシュ・記憶階層",
+     "S": 4,
+     "R": 1,
+     "totalQ": 6,
+     "recentQ": 2,
+     "reuse": true,
+     "score": 34.2,
+     "label": "全12回中4回出題",
+     "repYears": [
+      "R6秋",
+      "R4春",
+      "R6秋",
+      "R3春",
+      "R3春",
+      "H30春"
+     ]
+    },
+    {
+     "rank": 27,
+     "topic": "EVM(アーンドバリュー)",
+     "S": 3,
+     "R": 1,
+     "totalQ": 3,
+     "recentQ": 1,
+     "reuse": true,
+     "score": 29.6,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R4春",
+      "H31春",
+      "R6春"
+     ]
+    },
+    {
+     "rank": 28,
+     "topic": "OS・タスク・ジョブ管理",
+     "S": 4,
+     "R": 1,
+     "totalQ": 4,
+     "recentQ": 1,
+     "reuse": false,
+     "score": 24.2,
+     "label": "全12回中4回出題",
+     "repYears": [
+      "R6春",
+      "R4春",
+      "H30春",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 29,
+     "topic": "IE・OR・意思決定",
+     "S": 3,
+     "R": 1,
+     "totalQ": 4,
+     "recentQ": 1,
+     "reuse": false,
+     "score": 19.6,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R6秋",
+      "R元秋",
+      "H30春",
+      "H30春"
+     ]
+    },
+    {
+     "rank": 30,
+     "topic": "マーケティング",
+     "S": 3,
+     "R": 1,
+     "totalQ": 3,
+     "recentQ": 1,
+     "reuse": false,
+     "score": 19.6,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R5秋",
+      "R元秋",
+      "H31春"
+     ]
+    },
+    {
+     "rank": 31,
+     "topic": "入出力・補助記憶・RAID",
+     "S": 2,
+     "R": 0,
+     "totalQ": 2,
+     "recentQ": 0,
+     "reuse": false,
+     "score": 9.2,
+     "label": "全12回中2回出題",
+     "repYears": [
+      "R元秋",
+      "H31春"
+     ]
+    }
+   ],
+   "order": [
+    "ipa-2023r05h-am1-q13",
+    "book-R04s-am1-q15",
+    "book-R03s-am1-q13",
+    "book-R01a-am1-q14",
+    "book-H31s-am1-q13",
+    "book-H30s-am1-q14",
+    "book-H29s-am1-q14",
+    "ipa-2025r07a-am1-q11",
+    "ipa-2025r07a-am1-q12",
+    "ipa-2025r07a-am1-q13",
+    "ipa-2025r07a-am1-q14",
+    "ipa-2025r07a-am1-q15",
+    "ipa-2025r07h-am1-q12",
+    "ipa-2025r07h-am1-q13",
+    "ipa-2025r07h-am1-q14",
+    "ipa-2025r07h-am1-q15",
+    "ipa-2024r06a-am1-q03",
+    "ipa-2024r06a-am1-q13",
+    "ipa-2024r06a-am1-q14",
+    "ipa-2024r06a-am1-q15",
+    "ipa-2024r06a-am1-q16",
+    "ipa-2024r06h-am1-q12",
+    "ipa-2024r06h-am1-q13",
+    "ipa-2024r06h-am1-q14",
+    "ipa-2024r06h-am1-q15",
+    "ipa-2023r05a-am1-q12",
+    "ipa-2023r05a-am1-q14",
+    "ipa-2023r05a-am1-q15",
+    "ipa-2023r05h-am1-q06",
+    "ipa-2023r05h-am1-q12",
+    "book-R04s-am1-q12",
+    "book-R04s-am1-q13",
+    "book-R04s-am1-q14",
+    "book-R03s-am1-q12",
+    "book-R03s-am1-q14",
+    "book-R03s-am1-q30",
+    "book-R01a-am1-q11",
+    "book-R01a-am1-q12",
+    "book-R01a-am1-q13",
+    "book-R01a-am1-q15",
+    "book-H31s-am1-q12",
+    "book-H31s-am1-q14",
+    "book-H31s-am1-q15",
+    "book-H30s-am1-q12",
+    "book-H30s-am1-q13",
+    "book-H29s-am1-q12",
+    "book-H29s-am1-q13",
+    "book-H29s-am1-q15",
+    "ipa-2023r05h-am1-q22",
+    "book-R03s-am1-q21",
+    "book-R01a-am1-q22",
+    "book-H30s-am1-q22",
+    "ipa-2025r07a-am1-q21",
+    "ipa-2025r07a-am1-q22",
+    "ipa-2025r07h-am1-q21",
+    "ipa-2025r07h-am1-q22",
+    "ipa-2024r06a-am1-q21",
+    "ipa-2024r06a-am1-q22",
+    "ipa-2024r06h-am1-q21",
+    "ipa-2024r06h-am1-q22",
+    "ipa-2023r05a-am1-q22",
+    "ipa-2023r05h-am1-q21",
+    "book-R03s-am1-q22",
+    "book-R01a-am1-q21",
+    "book-H31s-am1-q22",
+    "book-H30s-am1-q21",
+    "book-H29s-am1-q22",
+    "ipa-2025r07h-am1-q03",
+    "book-R03s-am1-q2",
+    "ipa-2025r07a-am1-q03",
+    "ipa-2025r07a-am1-q06",
+    "ipa-2025r07h-am1-q01",
+    "ipa-2024r06a-am1-q02",
+    "ipa-2024r06h-am1-q03",
+    "ipa-2023r05a-am1-q01",
+    "ipa-2023r05a-am1-q03",
+    "ipa-2023r05h-am1-q03",
+    "book-R04s-am1-q16",
+    "book-R03s-am1-q16",
+    "book-R01a-am1-q4",
+    "book-H31s-am1-q3",
+    "book-H29s-am1-q3",
+    "ipa-2025r07a-am1-q10",
+    "ipa-2025r07h-am1-q11",
+    "ipa-2025r07h-am1-q18",
+    "ipa-2024r06a-am1-q11",
+    "ipa-2024r06a-am1-q12",
+    "ipa-2024r06h-am1-q10",
+    "ipa-2023r05a-am1-q10",
+    "ipa-2023r05a-am1-q11",
+    "ipa-2023r05a-am1-q13",
+    "ipa-2023r05h-am1-q10",
+    "ipa-2023r05h-am1-q14",
+    "ipa-2023r05h-am1-q15",
+    "book-R04s-am1-q10",
+    "book-R04s-am1-q11",
+    "book-R03s-am1-q11",
+    "book-R01a-am1-q10",
+    "book-H31s-am1-q11",
+    "book-H30s-am1-q11",
+    "book-H29s-am1-q10",
+    "book-H29s-am1-q11",
+    "ipa-2025r07a-am1-q23",
+    "ipa-2023r05a-am1-q19",
+    "book-R03s-am1-q19",
+    "book-H31s-am1-q19",
+    "book-H29s-am1-q18",
+    "book-H29s-am1-q23",
+    "ipa-2025r07a-am1-q18",
+    "ipa-2025r07a-am1-q19",
+    "ipa-2025r07h-am1-q19",
+    "ipa-2024r06a-am1-q18",
+    "ipa-2024r06a-am1-q19",
+    "ipa-2023r05a-am1-q18",
+    "ipa-2023r05h-am1-q18",
+    "ipa-2023r05h-am1-q19",
+    "book-R04s-am1-q19",
+    "book-R04s-am1-q29",
+    "book-R03s-am1-q18",
+    "book-R01a-am1-q18",
+    "book-R01a-am1-q19",
+    "book-H31s-am1-q23",
+    "book-H30s-am1-q18",
+    "book-H29s-am1-q19",
+    "ipa-2025r07a-am1-q26",
+    "ipa-2023r05a-am1-q25",
+    "ipa-2023r05h-am1-q26",
+    "book-R01a-am1-q25",
+    "ipa-2025r07a-am1-q27",
+    "ipa-2025r07h-am1-q26",
+    "ipa-2024r06a-am1-q26",
+    "ipa-2024r06a-am1-q29",
+    "book-R04s-am1-q26",
+    "book-R04s-am1-q27",
+    "book-R03s-am1-q29",
+    "book-R01a-am1-q26",
+    "book-H31s-am1-q26",
+    "book-H30s-am1-q23",
+    "book-H30s-am1-q26",
+    "book-H29s-am1-q24",
+    "book-H29s-am1-q26",
+    "ipa-2025r07a-am1-q05",
+    "ipa-2025r07h-am1-q05",
+    "ipa-2025r07h-am1-q24",
+    "ipa-2024r06a-am1-q05",
+    "ipa-2024r06a-am1-q20",
+    "ipa-2024r06h-am1-q05",
+    "ipa-2023r05a-am1-q21",
+    "ipa-2023r05h-am1-q05",
+    "ipa-2023r05h-am1-q17",
+    "book-R03s-am1-q5",
+    "book-R01a-am1-q9",
+    "book-H31s-am1-q16",
+    "book-H29s-am1-q5",
+    "ipa-2025r07a-am1-q28",
+    "ipa-2025r07h-am1-q07",
+    "ipa-2024r06a-am1-q08",
+    "ipa-2024r06h-am1-q25",
+    "ipa-2024r06h-am1-q28",
+    "ipa-2023r05a-am1-q17",
+    "ipa-2023r05h-am1-q27",
+    "book-R03s-am1-q7",
+    "book-R03s-am1-q27",
+    "book-R01a-am1-q8",
+    "book-H31s-am1-q28",
+    "ipa-2023r05h-am1-q28",
+    "book-R03s-am1-q28",
+    "ipa-2025r07a-am1-q01",
+    "ipa-2025r07a-am1-q08",
+    "ipa-2024r06h-am1-q11",
+    "ipa-2024r06h-am1-q19",
+    "ipa-2023r05a-am1-q06",
+    "ipa-2023r05a-am1-q09",
+    "ipa-2023r05h-am1-q02",
+    "book-R04s-am1-q8",
+    "book-R03s-am1-q20",
+    "book-R03s-am1-q26",
+    "book-R01a-am1-q5",
+    "book-H31s-am1-q10",
+    "book-H30s-am1-q5",
+    "book-H30s-am1-q7",
+    "book-R03s-am1-q24",
+    "book-H30s-am1-q25",
+    "book-H29s-am1-q25",
+    "ipa-2025r07a-am1-q24",
+    "ipa-2024r06a-am1-q24",
+    "ipa-2023r05a-am1-q23",
+    "ipa-2023r05a-am1-q24",
+    "ipa-2023r05h-am1-q24",
+    "ipa-2023r05h-am1-q25",
+    "book-R04s-am1-q23",
+    "book-R03s-am1-q23",
+    "book-H31s-am1-q25",
+    "ipa-2025r07a-am1-q09",
+    "ipa-2025r07h-am1-q09",
+    "ipa-2025r07h-am1-q10",
+    "ipa-2024r06h-am1-q09",
+    "ipa-2023r05h-am1-q09",
+    "book-R04s-am1-q1",
+    "book-R04s-am1-q2",
+    "book-R04s-am1-q3",
+    "book-R04s-am1-q5",
+    "book-R04s-am1-q7",
+    "book-R04s-am1-q21",
+    "book-R03s-am1-q3",
+    "book-R03s-am1-q8",
+    "book-R03s-am1-q9",
+    "book-R01a-am1-q2",
+    "book-R01a-am1-q3",
+    "book-R01a-am1-q7",
+    "book-R01a-am1-q23",
+    "book-H31s-am1-q2",
+    "book-H31s-am1-q5",
+    "book-H31s-am1-q6",
+    "book-H31s-am1-q9",
+    "book-H30s-am1-q1",
+    "book-H30s-am1-q2",
+    "book-H30s-am1-q6",
+    "book-H30s-am1-q8",
+    "book-H30s-am1-q9",
+    "book-H29s-am1-q4",
+    "book-H29s-am1-q6",
+    "book-H29s-am1-q7",
+    "book-H29s-am1-q9",
+    "ipa-2025r07a-am1-q17",
+    "ipa-2025r07a-am1-q30",
+    "ipa-2024r06a-am1-q30",
+    "ipa-2023r05a-am1-q30",
+    "ipa-2023r05h-am1-q30",
+    "book-R04s-am1-q30",
+    "book-R03s-am1-q25",
+    "book-R01a-am1-q17",
+    "book-R01a-am1-q30",
+    "book-H31s-am1-q30",
+    "book-H30s-am1-q10",
+    "book-H30s-am1-q30",
+    "ipa-2025r07a-am1-q20",
+    "book-H29s-am1-q21",
+    "ipa-2025r07h-am1-q20",
+    "ipa-2024r06h-am1-q20",
+    "book-R04s-am1-q20",
+    "book-R01a-am1-q20",
+    "book-H31s-am1-q20",
+    "book-H30s-am1-q19",
+    "book-H30s-am1-q20",
+    "book-H29s-am1-q20",
+    "book-R04s-am1-q25",
+    "ipa-2025r07a-am1-q16",
+    "ipa-2024r06a-am1-q25",
+    "ipa-2024r06h-am1-q16",
+    "ipa-2023r05h-am1-q16",
+    "book-H29s-am1-q16",
+    "ipa-2025r07a-am1-q25",
+    "ipa-2025r07a-am1-q29",
+    "ipa-2025r07h-am1-q29",
+    "ipa-2024r06h-am1-q29",
+    "ipa-2023r05h-am1-q23",
+    "ipa-2023r05h-am1-q29",
+    "book-R04s-am1-q24",
+    "book-R04s-am1-q28",
+    "book-R01a-am1-q29",
+    "book-H30s-am1-q29",
+    "book-H29s-am1-q29",
+    "ipa-2025r07h-am1-q16",
+    "ipa-2025r07h-am1-q17",
+    "ipa-2025r07h-am1-q25",
+    "ipa-2024r06h-am1-q17",
+    "ipa-2023r05h-am1-q20",
+    "book-R04s-am1-q17",
+    "book-R04s-am1-q22",
+    "book-R03s-am1-q17",
+    "book-R01a-am1-q16",
+    "book-H31s-am1-q17",
+    "book-H30s-am1-q17",
+    "book-H29s-am1-q17",
+    "ipa-2025r07h-am1-q08",
+    "ipa-2024r06a-am1-q09",
+    "ipa-2024r06h-am1-q08",
+    "ipa-2024r06h-am1-q26",
+    "ipa-2023r05a-am1-q08",
+    "ipa-2023r05h-am1-q08",
+    "book-H31s-am1-q8",
+    "ipa-2025r07a-am1-q07",
+    "ipa-2024r06h-am1-q07",
+    "ipa-2023r05a-am1-q07",
+    "ipa-2023r05h-am1-q07",
+    "book-R03s-am1-q1",
+    "book-R03s-am1-q10",
+    "book-R01a-am1-q1",
+    "book-H31s-am1-q7",
+    "ipa-2025r07h-am1-q23",
+    "ipa-2024r06a-am1-q23",
+    "ipa-2024r06h-am1-q04",
+    "ipa-2023r05a-am1-q05",
+    "ipa-2023r05a-am1-q16",
+    "book-R04s-am1-q9",
+    "book-R01a-am1-q28",
+    "ipa-2025r07a-am1-q04",
+    "ipa-2025r07h-am1-q04",
+    "ipa-2023r05a-am1-q04",
+    "ipa-2023r05h-am1-q04",
+    "book-H31s-am1-q4",
+    "ipa-2025r07h-am1-q06",
+    "ipa-2024r06h-am1-q02",
+    "ipa-2023r05a-am1-q02",
+    "ipa-2023r05h-am1-q01",
+    "book-H29s-am1-q1",
+    "book-R03s-am1-q15",
+    "book-H30s-am1-q15",
+    "ipa-2024r06h-am1-q30",
+    "ipa-2023r05h-am1-q11",
+    "book-H29s-am1-q30",
+    "ipa-2025r07a-am1-q02",
+    "ipa-2025r07h-am1-q02",
+    "ipa-2025r07h-am1-q27",
+    "ipa-2025r07h-am1-q28",
+    "ipa-2025r07h-am1-q30",
+    "ipa-2024r06a-am1-q01",
+    "ipa-2023r05a-am1-q28",
+    "ipa-2024r06a-am1-q27",
+    "ipa-2024r06h-am1-q27",
+    "ipa-2023r05a-am1-q27",
+    "book-H31s-am1-q27",
+    "ipa-2023r05a-am1-q29",
+    "ipa-2024r06a-am1-q28",
+    "book-H29s-am1-q28",
+    "ipa-2024r06a-am1-q04",
+    "book-R04s-am1-q4",
+    "ipa-2024r06a-am1-q06",
+    "book-R03s-am1-q4",
+    "book-R03s-am1-q6",
+    "book-H30s-am1-q4",
+    "book-R04s-am1-q18",
+    "book-H31s-am1-q18",
+    "ipa-2024r06h-am1-q18",
+    "ipa-2024r06h-am1-q06",
+    "book-R04s-am1-q6",
+    "book-H30s-am1-q16",
+    "book-H29s-am1-q8",
+    "ipa-2024r06a-am1-q07",
+    "book-R01a-am1-q24",
+    "book-H30s-am1-q27",
+    "book-H30s-am1-q28",
+    "ipa-2023r05a-am1-q26",
+    "book-R01a-am1-q27",
+    "book-H31s-am1-q24",
+    "book-R01a-am1-q6",
+    "book-H31s-am1-q21"
+   ]
+  },
+  "A-2": {
+   "topics": [
+    {
+     "rank": 1,
+     "topic": "データベース技術",
+     "S": 12,
+     "R": 6,
+     "totalQ": 15,
+     "recentQ": 7,
+     "reuse": true,
+     "score": 100.0,
+     "label": "全12回中12回出題",
+     "repYears": [
+      "R7秋",
+      "H30春",
+      "R7春",
+      "R6秋",
+      "R6春",
+      "R5秋"
+     ]
+    },
+    {
+     "rank": 2,
+     "topic": "ネットワーク技術(TCP/IP・LAN)",
+     "S": 12,
+     "R": 6,
+     "totalQ": 27,
+     "recentQ": 13,
+     "reuse": false,
+     "score": 90.0,
+     "label": "全12回中12回出題",
+     "repYears": [
+      "R7秋",
+      "R7秋",
+      "R7秋",
+      "R7春",
+      "R7春",
+      "R7春"
+     ]
+    },
+    {
+     "rank": 3,
+     "topic": "システム開発技術(アジャイル/UML/テスト)",
+     "S": 11,
+     "R": 5,
+     "totalQ": 18,
+     "recentQ": 9,
+     "reuse": true,
+     "score": 89.6,
+     "label": "全12回中11回出題",
+     "repYears": [
+      "R6秋",
+      "R3春",
+      "R3春",
+      "H30春",
+      "H29春",
+      "R7秋"
+     ]
+    },
+    {
+     "rank": 4,
+     "topic": "メールセキュリティ(SPF/DKIM等)",
+     "S": 11,
+     "R": 5,
+     "totalQ": 12,
+     "recentQ": 6,
+     "reuse": true,
+     "score": 89.6,
+     "label": "全12回中11回出題",
+     "repYears": [
+      "R7春",
+      "R5秋",
+      "R5春",
+      "R5春",
+      "R4春",
+      "R3春"
+     ]
+    },
+    {
+     "rank": 5,
+     "topic": "ITサービスマネジメント・可用性",
+     "S": 9,
+     "R": 6,
+     "totalQ": 9,
+     "recentQ": 6,
+     "reuse": true,
+     "score": 86.2,
+     "label": "全12回中9回出題",
+     "repYears": [
+      "R7秋",
+      "R4春",
+      "H30春",
+      "R7春",
+      "R6秋",
+      "R6春"
+     ]
+    },
+    {
+     "rank": 6,
+     "topic": "シングルサインオン・ID連携",
+     "S": 8,
+     "R": 5,
+     "totalQ": 11,
+     "recentQ": 8,
+     "reuse": true,
+     "score": 75.8,
+     "label": "全12回中8回出題",
+     "repYears": [
+      "R7春",
+      "R6春",
+      "R5春",
+      "H31春",
+      "R7春",
+      "R6秋"
+     ]
+    },
+    {
+     "rank": 7,
+     "topic": "TLS・SSL・HTTPS",
+     "S": 8,
+     "R": 4,
+     "totalQ": 11,
+     "recentQ": 5,
+     "reuse": true,
+     "score": 70.0,
+     "label": "全12回中8回出題",
+     "repYears": [
+      "R6春",
+      "R4春",
+      "R7春",
+      "R6秋",
+      "R5秋",
+      "R5秋"
+     ]
+    },
+    {
+     "rank": 8,
+     "topic": "公開鍵基盤(PKI)・証明書",
+     "S": 8,
+     "R": 4,
+     "totalQ": 11,
+     "recentQ": 7,
+     "reuse": true,
+     "score": 70.0,
+     "label": "全12回中8回出題",
+     "repYears": [
+      "R7秋",
+      "R7春",
+      "R6春",
+      "R5秋",
+      "R6春",
+      "R6春"
+     ]
+    },
+    {
+     "rank": 9,
+     "topic": "無線LANセキュリティ",
+     "S": 8,
+     "R": 4,
+     "totalQ": 11,
+     "recentQ": 4,
+     "reuse": true,
+     "score": 70.0,
+     "label": "全12回中8回出題",
+     "repYears": [
+      "R6秋",
+      "R5春",
+      "R4春",
+      "R4春",
+      "H31春",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 10,
+     "topic": "ISMS・セキュリティ評価制度",
+     "S": 7,
+     "R": 4,
+     "totalQ": 8,
+     "recentQ": 5,
+     "reuse": true,
+     "score": 65.4,
+     "label": "全12回中7回出題",
+     "repYears": [
+      "R7春",
+      "R5秋",
+      "R7春",
+      "R6春",
+      "R5春",
+      "R4春"
+     ]
+    },
+    {
+     "rank": 11,
+     "topic": "脆弱性管理・CVSS・診断",
+     "S": 8,
+     "R": 3,
+     "totalQ": 12,
+     "recentQ": 4,
+     "reuse": true,
+     "score": 64.2,
+     "label": "全12回中8回出題",
+     "repYears": [
+      "R3春",
+      "H29春",
+      "R6春",
+      "R6春",
+      "R5秋",
+      "R5春"
+     ]
+    },
+    {
+     "rank": 12,
+     "topic": "DNSセキュリティ(DNSSEC等)",
+     "S": 8,
+     "R": 3,
+     "totalQ": 10,
+     "recentQ": 4,
+     "reuse": true,
+     "score": 64.2,
+     "label": "全12回中8回出題",
+     "repYears": [
+      "R4春",
+      "H30春",
+      "R7春",
+      "R7春",
+      "R5秋",
+      "R5春"
+     ]
+    },
+    {
+     "rank": 13,
+     "topic": "ハッシュ・メッセージ認証(MAC)",
+     "S": 6,
+     "R": 4,
+     "totalQ": 7,
+     "recentQ": 4,
+     "reuse": true,
+     "score": 60.8,
+     "label": "全12回中6回出題",
+     "repYears": [
+      "R5春",
+      "H31春",
+      "R7秋",
+      "R7春",
+      "R6春",
+      "R3春"
+     ]
+    },
+    {
+     "rank": 14,
+     "topic": "システム監査・内部統制",
+     "S": 8,
+     "R": 4,
+     "totalQ": 8,
+     "recentQ": 4,
+     "reuse": false,
+     "score": 60.0,
+     "label": "全12回中8回出題",
+     "repYears": [
+      "R7春",
+      "R6秋",
+      "R6春",
+      "R5春",
+      "R4春",
+      "R元秋"
+     ]
+    },
+    {
+     "rank": 15,
+     "topic": "IDS・IPS・WAF・監視",
+     "S": 5,
+     "R": 4,
+     "totalQ": 8,
+     "recentQ": 7,
+     "reuse": true,
+     "score": 56.2,
+     "label": "全12回中5回出題",
+     "repYears": [
+      "R6秋",
+      "R6春",
+      "R5春",
+      "H29春",
+      "R7秋",
+      "R6秋"
+     ]
+    },
+    {
+     "rank": 16,
+     "topic": "暗号技術一般・鍵管理",
+     "S": 6,
+     "R": 3,
+     "totalQ": 8,
+     "recentQ": 5,
+     "reuse": true,
+     "score": 55.0,
+     "label": "全12回中6回出題",
+     "repYears": [
+      "R7秋",
+      "R5春",
+      "H31春",
+      "R7秋",
+      "R7秋",
+      "R6秋"
+     ]
+    },
+    {
+     "rank": 17,
+     "topic": "標的型攻撃・APT",
+     "S": 5,
+     "R": 3,
+     "totalQ": 5,
+     "recentQ": 3,
+     "reuse": true,
+     "score": 50.4,
+     "label": "全12回中5回出題",
+     "repYears": [
+      "R3春",
+      "H30春",
+      "R7秋",
+      "R7春",
+      "R6秋"
+     ]
+    },
+    {
+     "rank": 18,
+     "topic": "ハードウェアセキュリティ(ICカード/TPM)",
+     "S": 6,
+     "R": 2,
+     "totalQ": 7,
+     "recentQ": 2,
+     "reuse": true,
+     "score": 49.2,
+     "label": "全12回中6回出題",
+     "repYears": [
+      "R3春",
+      "H31春",
+      "R7春",
+      "R5春",
+      "R4春",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 19,
+     "topic": "ランサムウェア・マルウェア",
+     "S": 7,
+     "R": 2,
+     "totalQ": 10,
+     "recentQ": 4,
+     "reuse": false,
+     "score": 43.8,
+     "label": "全12回中7回出題",
+     "repYears": [
+      "R7秋",
+      "R7春",
+      "R7春",
+      "R7春",
+      "R3春",
+      "R元秋"
+     ]
+    },
+    {
+     "rank": 20,
+     "topic": "インシデント対応・CSIRT",
+     "S": 4,
+     "R": 4,
+     "totalQ": 4,
+     "recentQ": 4,
+     "reuse": false,
+     "score": 41.7,
+     "label": "全12回中4回出題",
+     "repYears": [
+      "R7秋",
+      "R7春",
+      "R6秋",
+      "R6春"
+     ]
+    },
+    {
+     "rank": 21,
+     "topic": "ディジタル署名",
+     "S": 4,
+     "R": 2,
+     "totalQ": 6,
+     "recentQ": 2,
+     "reuse": true,
+     "score": 40.0,
+     "label": "全12回中4回出題",
+     "repYears": [
+      "R5秋",
+      "R元秋",
+      "H30春",
+      "R7秋",
+      "R元秋",
+      "H30春"
+     ]
+    },
+    {
+     "rank": 22,
+     "topic": "認証(多要素・OTP・FIDO・生体)",
+     "S": 4,
+     "R": 2,
+     "totalQ": 5,
+     "recentQ": 3,
+     "reuse": true,
+     "score": 40.0,
+     "label": "全12回中4回出題",
+     "repYears": [
+      "R7秋",
+      "H30春",
+      "R7秋",
+      "R6秋",
+      "R4春"
+     ]
+    },
+    {
+     "rank": 23,
+     "topic": "DoS・DDoS",
+     "S": 6,
+     "R": 2,
+     "totalQ": 7,
+     "recentQ": 3,
+     "reuse": false,
+     "score": 39.2,
+     "label": "全12回中6回出題",
+     "repYears": [
+      "R7秋",
+      "R6秋",
+      "R6秋",
+      "R3春",
+      "R元秋",
+      "H31春"
+     ]
+    },
+    {
+     "rank": 24,
+     "topic": "ファイアウォール・境界防御",
+     "S": 5,
+     "R": 1,
+     "totalQ": 7,
+     "recentQ": 1,
+     "reuse": true,
+     "score": 38.8,
+     "label": "全12回中5回出題",
+     "repYears": [
+      "R3春",
+      "R元秋",
+      "H31春",
+      "H30春",
+      "R6春",
+      "R3春"
+     ]
+    },
+    {
+     "rank": 25,
+     "topic": "クロスサイトリクエストフォージェリ(CSRF)",
+     "S": 3,
+     "R": 2,
+     "totalQ": 3,
+     "recentQ": 2,
+     "reuse": true,
+     "score": 35.4,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R7秋",
+      "R6春",
+      "H31春"
+     ]
+    },
+    {
+     "rank": 26,
+     "topic": "OSコマンドインジェクション",
+     "S": 4,
+     "R": 1,
+     "totalQ": 4,
+     "recentQ": 1,
+     "reuse": true,
+     "score": 34.2,
+     "label": "全12回中4回出題",
+     "repYears": [
+      "R5秋",
+      "R4春",
+      "H30春",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 27,
+     "topic": "IoT・制御システムセキュリティ",
+     "S": 3,
+     "R": 1,
+     "totalQ": 3,
+     "recentQ": 1,
+     "reuse": true,
+     "score": 29.6,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R5秋",
+      "R4春",
+      "R元秋"
+     ]
+    },
+    {
+     "rank": 28,
+     "topic": "SQLインジェクション",
+     "S": 3,
+     "R": 1,
+     "totalQ": 3,
+     "recentQ": 1,
+     "reuse": true,
+     "score": 29.6,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R5春",
+      "R元秋",
+      "H30春"
+     ]
+    },
+    {
+     "rank": 29,
+     "topic": "Webアプリの脆弱性・対策一般",
+     "S": 3,
+     "R": 1,
+     "totalQ": 3,
+     "recentQ": 1,
+     "reuse": true,
+     "score": 29.6,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R3春",
+      "H31春",
+      "R7秋"
+     ]
+    },
+    {
+     "rank": 30,
+     "topic": "セキュリティ管理・ポリシー・制度",
+     "S": 3,
+     "R": 2,
+     "totalQ": 3,
+     "recentQ": 2,
+     "reuse": false,
+     "score": 25.4,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R7春",
+      "R5春",
+      "R4春"
+     ]
+    },
+    {
+     "rank": 31,
+     "topic": "アクセス制御・認可",
+     "S": 2,
+     "R": 1,
+     "totalQ": 2,
+     "recentQ": 1,
+     "reuse": true,
+     "score": 25.0,
+     "label": "全12回中2回出題",
+     "repYears": [
+      "R5秋",
+      "H30春"
+     ]
+    },
+    {
+     "rank": 32,
+     "topic": "共通鍵・ブロック暗号",
+     "S": 4,
+     "R": 1,
+     "totalQ": 5,
+     "recentQ": 2,
+     "reuse": false,
+     "score": 24.2,
+     "label": "全12回中4回出題",
+     "repYears": [
+      "R5春",
+      "R5春",
+      "R3春",
+      "H31春",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 33,
+     "topic": "法規・契約・知的財産",
+     "S": 2,
+     "R": 2,
+     "totalQ": 2,
+     "recentQ": 2,
+     "reuse": false,
+     "score": 20.8,
+     "label": "全12回中2回出題",
+     "repYears": [
+      "R7秋",
+      "R5春"
+     ]
+    },
+    {
+     "rank": 34,
+     "topic": "クラウド・コンテナ・仮想化セキュリティ",
+     "S": 3,
+     "R": 1,
+     "totalQ": 3,
+     "recentQ": 1,
+     "reuse": false,
+     "score": 19.6,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R6春",
+      "R4春",
+      "R3春"
+     ]
+    },
+    {
+     "rank": 35,
+     "topic": "公開鍵暗号・鍵交換",
+     "S": 2,
+     "R": 1,
+     "totalQ": 3,
+     "recentQ": 2,
+     "reuse": false,
+     "score": 15.0,
+     "label": "全12回中2回出題",
+     "repYears": [
+      "R6秋",
+      "R6秋",
+      "R4春"
+     ]
+    },
+    {
+     "rank": 36,
+     "topic": "リスクアセスメント・リスク対応",
+     "S": 2,
+     "R": 1,
+     "totalQ": 2,
+     "recentQ": 1,
+     "reuse": false,
+     "score": 15.0,
+     "label": "全12回中2回出題",
+     "repYears": [
+      "R7秋",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 37,
+     "topic": "セッション管理・Cookie",
+     "S": 3,
+     "R": 0,
+     "totalQ": 3,
+     "recentQ": 0,
+     "reuse": false,
+     "score": 13.8,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R元秋",
+      "H30春",
+      "H29春"
+     ]
+    },
+    {
+     "rank": 38,
+     "topic": "パスワード攻撃・攻撃手法一般",
+     "S": 3,
+     "R": 0,
+     "totalQ": 3,
+     "recentQ": 0,
+     "reuse": false,
+     "score": 13.8,
+     "label": "全12回中3回出題",
+     "repYears": [
+      "R4春",
+      "H30春",
+      "H29春"
+     ]
+    }
+   ],
+   "order": [
+    "ipa-2025r07a-am2-q21",
+    "book-H30s-am2-q21",
+    "ipa-2025r07h-am2-q21",
+    "ipa-2024r06a-am2-q21",
+    "ipa-2024r06h-am2-q21",
+    "ipa-2023r05a-am2-q07",
+    "ipa-2023r05a-am2-q21",
+    "ipa-2023r05h-am2-q21",
+    "book-R04s-am2-q21",
+    "book-R03s-am2-q21",
+    "book-R03s-am2-q24",
+    "book-R01a-am2-q21",
+    "book-H31s-am2-q21",
+    "book-H29s-am2-q21",
+    "book-H29s-am2-q24",
+    "ipa-2025r07a-am2-q18",
+    "ipa-2025r07a-am2-q19",
+    "ipa-2025r07a-am2-q20",
+    "ipa-2025r07h-am2-q18",
+    "ipa-2025r07h-am2-q19",
+    "ipa-2025r07h-am2-q20",
+    "ipa-2024r06a-am2-q19",
+    "ipa-2024r06h-am2-q14",
+    "ipa-2024r06h-am2-q18",
+    "ipa-2023r05a-am2-q18",
+    "ipa-2023r05a-am2-q19",
+    "ipa-2023r05a-am2-q20",
+    "ipa-2023r05h-am2-q20",
+    "book-R04s-am2-q19",
+    "book-R04s-am2-q20",
+    "book-R03s-am2-q1",
+    "book-R03s-am2-q19",
+    "book-R03s-am2-q20",
+    "book-R01a-am2-q19",
+    "book-R01a-am2-q20",
+    "book-H31s-am2-q12",
+    "book-H31s-am2-q19",
+    "book-H31s-am2-q20",
+    "book-H30s-am2-q18",
+    "book-H30s-am2-q19",
+    "book-H30s-am2-q20",
+    "book-H29s-am2-q19",
+    "ipa-2024r06a-am2-q23",
+    "book-R03s-am2-q22",
+    "book-R03s-am2-q23",
+    "book-H30s-am2-q23",
+    "book-H29s-am2-q22",
+    "ipa-2025r07a-am2-q22",
+    "ipa-2025r07h-am2-q22",
+    "ipa-2025r07h-am2-q23",
+    "ipa-2024r06a-am2-q22",
+    "ipa-2024r06h-am2-q22",
+    "ipa-2024r06h-am2-q23",
+    "ipa-2023r05a-am2-q22",
+    "ipa-2023r05a-am2-q23",
+    "book-R04s-am2-q23",
+    "book-R01a-am2-q22",
+    "book-R01a-am2-q23",
+    "book-H31s-am2-q23",
+    "book-H30s-am2-q22",
+    "ipa-2025r07h-am2-q17",
+    "ipa-2023r05a-am2-q16",
+    "ipa-2023r05h-am2-q15",
+    "ipa-2023r05h-am2-q16",
+    "book-R04s-am2-q16",
+    "book-R03s-am2-q14",
+    "book-R01a-am2-q12",
+    "book-H31s-am2-q14",
+    "book-H29s-am2-q15",
+    "ipa-2024r06a-am2-q10",
+    "ipa-2024r06h-am2-q19",
+    "book-H30s-am2-q12",
+    "ipa-2025r07a-am2-q24",
+    "book-R04s-am2-q24",
+    "book-H30s-am2-q24",
+    "ipa-2025r07h-am2-q24",
+    "ipa-2024r06a-am2-q24",
+    "ipa-2024r06h-am2-q24",
+    "ipa-2023r05a-am2-q24",
+    "ipa-2023r05h-am2-q24",
+    "book-R01a-am2-q24",
+    "ipa-2025r07h-am2-q02",
+    "ipa-2024r06h-am2-q04",
+    "ipa-2023r05h-am2-q03",
+    "book-H31s-am2-q3",
+    "ipa-2025r07h-am2-q16",
+    "ipa-2024r06a-am2-q01",
+    "ipa-2024r06a-am2-q08",
+    "ipa-2024r06a-am2-q16",
+    "ipa-2023r05a-am2-q08",
+    "book-R04s-am2-q2",
+    "book-H29s-am2-q14",
+    "ipa-2024r06h-am2-q13",
+    "book-R04s-am2-q14",
+    "ipa-2025r07h-am2-q06",
+    "ipa-2024r06a-am2-q15",
+    "ipa-2023r05a-am2-q02",
+    "ipa-2023r05a-am2-q17",
+    "book-R04s-am2-q15",
+    "book-R03s-am2-q15",
+    "book-R01a-am2-q14",
+    "book-R01a-am2-q16",
+    "book-H29s-am2-q2",
+    "ipa-2025r07a-am2-q04",
+    "ipa-2025r07h-am2-q09",
+    "ipa-2024r06h-am2-q03",
+    "ipa-2023r05a-am2-q09",
+    "ipa-2024r06h-am2-q06",
+    "ipa-2024r06h-am2-q15",
+    "ipa-2023r05a-am2-q03",
+    "book-R03s-am2-q10",
+    "book-R01a-am2-q6",
+    "book-H31s-am2-q1",
+    "book-H30s-am2-q5",
+    "ipa-2024r06a-am2-q17",
+    "ipa-2023r05h-am2-q14",
+    "book-R04s-am2-q17",
+    "book-R04s-am2-q18",
+    "book-H31s-am2-q13",
+    "book-H29s-am2-q20",
+    "ipa-2025r07a-am2-q17",
+    "ipa-2024r06h-am2-q12",
+    "book-R03s-am2-q17",
+    "book-H31s-am2-q18",
+    "book-H29s-am2-q17",
+    "ipa-2025r07h-am2-q10",
+    "ipa-2023r05a-am2-q11",
+    "ipa-2025r07h-am2-q11",
+    "ipa-2024r06h-am2-q07",
+    "ipa-2023r05h-am2-q08",
+    "book-R04s-am2-q7",
+    "book-R03s-am2-q25",
+    "book-R01a-am2-q7",
+    "book-R03s-am2-q8",
+    "book-H29s-am2-q10",
+    "ipa-2024r06h-am2-q09",
+    "ipa-2024r06h-am2-q17",
+    "ipa-2023r05a-am2-q12",
+    "ipa-2023r05h-am2-q22",
+    "book-R01a-am2-q9",
+    "book-R01a-am2-q15",
+    "book-H31s-am2-q22",
+    "book-H30s-am2-q1",
+    "book-H30s-am2-q4",
+    "book-H29s-am2-q8",
+    "book-R04s-am2-q13",
+    "book-H30s-am2-q16",
+    "ipa-2025r07h-am2-q01",
+    "ipa-2025r07h-am2-q04",
+    "ipa-2023r05a-am2-q13",
+    "ipa-2023r05h-am2-q05",
+    "book-R01a-am2-q18",
+    "book-H31s-am2-q11",
+    "book-H31s-am2-q15",
+    "book-H29s-am2-q6",
+    "ipa-2023r05h-am2-q04",
+    "book-H31s-am2-q4",
+    "ipa-2025r07a-am2-q02",
+    "ipa-2025r07h-am2-q03",
+    "ipa-2024r06h-am2-q02",
+    "book-R03s-am2-q3",
+    "book-H31s-am2-q8",
+    "ipa-2025r07h-am2-q25",
+    "ipa-2024r06a-am2-q25",
+    "ipa-2024r06h-am2-q25",
+    "ipa-2023r05h-am2-q25",
+    "book-R04s-am2-q25",
+    "book-R01a-am2-q25",
+    "book-H31s-am2-q25",
+    "book-H29s-am2-q25",
+    "ipa-2024r06a-am2-q12",
+    "ipa-2024r06h-am2-q10",
+    "ipa-2023r05h-am2-q10",
+    "book-H29s-am2-q7",
+    "ipa-2025r07a-am2-q14",
+    "ipa-2024r06a-am2-q13",
+    "ipa-2024r06a-am2-q20",
+    "ipa-2023r05h-am2-q12",
+    "ipa-2025r07a-am2-q01",
+    "ipa-2023r05h-am2-q01",
+    "book-H31s-am2-q9",
+    "ipa-2025r07a-am2-q03",
+    "ipa-2025r07a-am2-q09",
+    "ipa-2024r06a-am2-q05",
+    "book-R04s-am2-q10",
+    "book-R01a-am2-q8",
+    "book-R03s-am2-q9",
+    "book-H30s-am2-q10",
+    "ipa-2025r07a-am2-q12",
+    "ipa-2025r07h-am2-q08",
+    "ipa-2024r06a-am2-q03",
+    "book-R03s-am2-q5",
+    "book-H31s-am2-q7",
+    "ipa-2025r07h-am2-q14",
+    "ipa-2023r05h-am2-q11",
+    "book-R04s-am2-q3",
+    "book-H29s-am2-q3",
+    "book-H29s-am2-q4",
+    "ipa-2025r07a-am2-q08",
+    "ipa-2025r07h-am2-q05",
+    "ipa-2025r07h-am2-q07",
+    "ipa-2025r07h-am2-q15",
+    "book-R03s-am2-q13",
+    "book-R01a-am2-q10",
+    "book-H31s-am2-q5",
+    "book-H30s-am2-q14",
+    "book-H30s-am2-q15",
+    "book-H29s-am2-q13",
+    "ipa-2025r07a-am2-q13",
+    "ipa-2025r07h-am2-q13",
+    "ipa-2024r06a-am2-q11",
+    "ipa-2024r06h-am2-q08",
+    "ipa-2023r05a-am2-q04",
+    "book-R01a-am2-q4",
+    "book-H30s-am2-q3",
+    "ipa-2025r07a-am2-q06",
+    "book-R01a-am2-q1",
+    "book-H30s-am2-q8",
+    "ipa-2025r07a-am2-q10",
+    "book-H30s-am2-q9",
+    "ipa-2025r07a-am2-q11",
+    "ipa-2024r06a-am2-q07",
+    "book-R04s-am2-q4",
+    "ipa-2025r07a-am2-q07",
+    "ipa-2024r06a-am2-q04",
+    "ipa-2024r06a-am2-q06",
+    "book-R03s-am2-q4",
+    "book-R01a-am2-q13",
+    "book-H31s-am2-q6",
+    "book-H29s-am2-q18",
+    "book-R03s-am2-q6",
+    "book-R01a-am2-q5",
+    "book-H31s-am2-q17",
+    "book-H30s-am2-q6",
+    "ipa-2024r06h-am2-q20",
+    "book-R03s-am2-q16",
+    "book-R03s-am2-q18",
+    "ipa-2025r07a-am2-q16",
+    "ipa-2024r06h-am2-q01",
+    "book-H31s-am2-q10",
+    "ipa-2023r05a-am2-q01",
+    "book-R04s-am2-q1",
+    "book-H30s-am2-q2",
+    "book-H29s-am2-q12",
+    "ipa-2023r05a-am2-q10",
+    "book-R04s-am2-q8",
+    "book-R01a-am2-q2",
+    "ipa-2023r05h-am2-q17",
+    "book-R01a-am2-q17",
+    "book-H30s-am2-q17",
+    "book-R03s-am2-q2",
+    "book-H31s-am2-q2",
+    "ipa-2025r07a-am2-q15",
+    "ipa-2025r07h-am2-q12",
+    "ipa-2023r05h-am2-q09",
+    "book-R04s-am2-q9",
+    "ipa-2023r05a-am2-q25",
+    "book-H30s-am2-q25",
+    "ipa-2023r05h-am2-q07",
+    "ipa-2023r05h-am2-q19",
+    "book-R03s-am2-q7",
+    "book-H31s-am2-q16",
+    "book-H29s-am2-q1",
+    "ipa-2025r07a-am2-q23",
+    "ipa-2023r05h-am2-q23",
+    "ipa-2024r06h-am2-q11",
+    "book-R04s-am2-q12",
+    "book-R03s-am2-q11",
+    "ipa-2024r06a-am2-q02",
+    "ipa-2024r06a-am2-q09",
+    "book-R04s-am2-q6",
+    "ipa-2025r07a-am2-q25",
+    "book-H29s-am2-q9",
+    "book-R01a-am2-q11",
+    "book-H30s-am2-q11",
+    "book-H29s-am2-q5",
+    "book-R04s-am2-q11",
+    "book-H30s-am2-q13",
+    "book-H29s-am2-q11"
+   ]
+  }
+ },
+ "qinfo": {
+  "ipa-2023r05h-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q15": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q11": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q15": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q15": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q03": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q15": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q16": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q15": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q15": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q06": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q30": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q11": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q15": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q14": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q15": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q12": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q13": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q15": {
+   "topic": "セキュリティ(暗号・認証・攻撃)",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q21": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q21": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q21": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q21": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q21": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q21": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q21": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q21": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q22": {
+   "topic": "システム監査・内部統制",
+   "S": 11,
+   "rank": 2,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q03": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q2": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q03": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q06": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q01": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q02": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q03": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q01": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q03": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q03": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q16": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q16": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q4": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q3": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q3": {
+   "topic": "アルゴリズム・計算量・データ構造",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q10": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q11": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q18": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q11": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q12": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q10": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q10": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q11": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q13": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q10": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q14": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q15": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q10": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q11": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q11": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q10": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q11": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q11": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q10": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q11": {
+   "topic": "ネットワーク(TCP/IP等)",
+   "S": 12,
+   "rank": 4,
+   "label": "全12回中12回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q23": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q19": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q19": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q19": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q18": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q23": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q18": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q19": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q19": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q18": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q19": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q18": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q18": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q19": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q19": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q29": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q18": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q18": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q19": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q23": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q18": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q19": {
+   "topic": "プロジェクトマネジメント",
+   "S": 11,
+   "rank": 5,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q26": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q25": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q26": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q25": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q27": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q26": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q26": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q29": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q26": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q27": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q29": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q26": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q26": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q23": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q26": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q24": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q26": {
+   "topic": "経営戦略・競争戦略",
+   "S": 11,
+   "rank": 6,
+   "label": "全12回中11回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q05": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q05": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q24": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q05": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q20": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q05": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q21": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q05": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q17": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q5": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q9": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q16": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q5": {
+   "topic": "システム構成・信頼性・性能",
+   "S": 10,
+   "rank": 7,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q28": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q07": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q08": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q25": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q28": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q17": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q27": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q7": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q27": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q8": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q28": {
+   "topic": "IoT・組込み・制御",
+   "S": 9,
+   "rank": 8,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q28": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q28": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q01": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q08": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q11": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q19": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q06": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q09": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q02": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q8": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q20": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q26": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q5": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q10": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q5": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q7": {
+   "topic": "確率・統計・数学",
+   "S": 9,
+   "rank": 9,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q24": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q25": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q25": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q24": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q24": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q23": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q24": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q24": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q25": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q23": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q23": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q25": {
+   "topic": "システム戦略・企画(RFP/BPR)",
+   "S": 9,
+   "rank": 10,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q09": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q09": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q10": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q09": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q09": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q1": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q2": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q3": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q5": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q7": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q21": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q3": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q8": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q9": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q2": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q3": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q7": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q23": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q2": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q5": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q6": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q9": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q1": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q2": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q6": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q8": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q9": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q4": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q6": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q7": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q9": {
+   "topic": "データベース",
+   "S": 10,
+   "rank": 11,
+   "label": "全12回中10回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q17": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q30": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q30": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q30": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q30": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q30": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q25": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q17": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q30": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q30": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q10": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q30": {
+   "topic": "標準化・関連法規",
+   "S": 9,
+   "rank": 12,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q20": {
+   "topic": "サービスマネジメント・ITIL・BCP",
+   "S": 8,
+   "rank": 13,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q21": {
+   "topic": "サービスマネジメント・ITIL・BCP",
+   "S": 8,
+   "rank": 13,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q20": {
+   "topic": "サービスマネジメント・ITIL・BCP",
+   "S": 8,
+   "rank": 13,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q20": {
+   "topic": "サービスマネジメント・ITIL・BCP",
+   "S": 8,
+   "rank": 13,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q20": {
+   "topic": "サービスマネジメント・ITIL・BCP",
+   "S": 8,
+   "rank": 13,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q20": {
+   "topic": "サービスマネジメント・ITIL・BCP",
+   "S": 8,
+   "rank": 13,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q20": {
+   "topic": "サービスマネジメント・ITIL・BCP",
+   "S": 8,
+   "rank": 13,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q19": {
+   "topic": "サービスマネジメント・ITIL・BCP",
+   "S": 8,
+   "rank": 13,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q20": {
+   "topic": "サービスマネジメント・ITIL・BCP",
+   "S": 8,
+   "rank": 13,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q20": {
+   "topic": "サービスマネジメント・ITIL・BCP",
+   "S": 8,
+   "rank": 13,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q25": {
+   "topic": "ソフトウェア設計・オブジェクト指向・UML",
+   "S": 6,
+   "rank": 14,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q16": {
+   "topic": "ソフトウェア設計・オブジェクト指向・UML",
+   "S": 6,
+   "rank": 14,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q25": {
+   "topic": "ソフトウェア設計・オブジェクト指向・UML",
+   "S": 6,
+   "rank": 14,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q16": {
+   "topic": "ソフトウェア設計・オブジェクト指向・UML",
+   "S": 6,
+   "rank": 14,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q16": {
+   "topic": "ソフトウェア設計・オブジェクト指向・UML",
+   "S": 6,
+   "rank": 14,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q16": {
+   "topic": "ソフトウェア設計・オブジェクト指向・UML",
+   "S": 6,
+   "rank": 14,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q25": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q29": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q29": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q29": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q23": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q29": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q24": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q28": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q29": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q29": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q29": {
+   "topic": "会計・財務",
+   "S": 8,
+   "rank": 15,
+   "label": "全12回中8回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q16": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q17": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q25": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q17": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q20": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q17": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q22": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q17": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q16": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q17": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q17": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q17": {
+   "topic": "開発プロセス・アジャイル・テスト",
+   "S": 9,
+   "rank": 16,
+   "label": "全12回中9回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q08": {
+   "topic": "画像・音声・メディア処理",
+   "S": 6,
+   "rank": 17,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q09": {
+   "topic": "画像・音声・メディア処理",
+   "S": 6,
+   "rank": 17,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q08": {
+   "topic": "画像・音声・メディア処理",
+   "S": 6,
+   "rank": 17,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q26": {
+   "topic": "画像・音声・メディア処理",
+   "S": 6,
+   "rank": 17,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q08": {
+   "topic": "画像・音声・メディア処理",
+   "S": 6,
+   "rank": 17,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q08": {
+   "topic": "画像・音声・メディア処理",
+   "S": 6,
+   "rank": 17,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q8": {
+   "topic": "画像・音声・メディア処理",
+   "S": 6,
+   "rank": 17,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q07": {
+   "topic": "論理演算・集合・ブール代数",
+   "S": 7,
+   "rank": 18,
+   "label": "全12回中7回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q07": {
+   "topic": "論理演算・集合・ブール代数",
+   "S": 7,
+   "rank": 18,
+   "label": "全12回中7回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q07": {
+   "topic": "論理演算・集合・ブール代数",
+   "S": 7,
+   "rank": 18,
+   "label": "全12回中7回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q07": {
+   "topic": "論理演算・集合・ブール代数",
+   "S": 7,
+   "rank": 18,
+   "label": "全12回中7回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q1": {
+   "topic": "論理演算・集合・ブール代数",
+   "S": 7,
+   "rank": 18,
+   "label": "全12回中7回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q10": {
+   "topic": "論理演算・集合・ブール代数",
+   "S": 7,
+   "rank": 18,
+   "label": "全12回中7回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q1": {
+   "topic": "論理演算・集合・ブール代数",
+   "S": 7,
+   "rank": 18,
+   "label": "全12回中7回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q7": {
+   "topic": "論理演算・集合・ブール代数",
+   "S": 7,
+   "rank": 18,
+   "label": "全12回中7回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q23": {
+   "topic": "新技術・デジタル(IoT/DX/BC)",
+   "S": 6,
+   "rank": 19,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q23": {
+   "topic": "新技術・デジタル(IoT/DX/BC)",
+   "S": 6,
+   "rank": 19,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q04": {
+   "topic": "新技術・デジタル(IoT/DX/BC)",
+   "S": 6,
+   "rank": 19,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q05": {
+   "topic": "新技術・デジタル(IoT/DX/BC)",
+   "S": 6,
+   "rank": 19,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q16": {
+   "topic": "新技術・デジタル(IoT/DX/BC)",
+   "S": 6,
+   "rank": 19,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q9": {
+   "topic": "新技術・デジタル(IoT/DX/BC)",
+   "S": 6,
+   "rank": 19,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q28": {
+   "topic": "新技術・デジタル(IoT/DX/BC)",
+   "S": 6,
+   "rank": 19,
+   "label": "全12回中6回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q04": {
+   "topic": "プロセッサ・CPUアーキテクチャ",
+   "S": 5,
+   "rank": 20,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q04": {
+   "topic": "プロセッサ・CPUアーキテクチャ",
+   "S": 5,
+   "rank": 20,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q04": {
+   "topic": "プロセッサ・CPUアーキテクチャ",
+   "S": 5,
+   "rank": 20,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q04": {
+   "topic": "プロセッサ・CPUアーキテクチャ",
+   "S": 5,
+   "rank": 20,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q4": {
+   "topic": "プロセッサ・CPUアーキテクチャ",
+   "S": 5,
+   "rank": 20,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q06": {
+   "topic": "基数変換・数値表現・誤差",
+   "S": 5,
+   "rank": 21,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q02": {
+   "topic": "基数変換・数値表現・誤差",
+   "S": 5,
+   "rank": 21,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q02": {
+   "topic": "基数変換・数値表現・誤差",
+   "S": 5,
+   "rank": 21,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q01": {
+   "topic": "基数変換・数値表現・誤差",
+   "S": 5,
+   "rank": 21,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q1": {
+   "topic": "基数変換・数値表現・誤差",
+   "S": 5,
+   "rank": 21,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q15": {
+   "topic": "ネットワーク応用・モバイル(DNS/HTTP/5G)",
+   "S": 5,
+   "rank": 22,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q15": {
+   "topic": "ネットワーク応用・モバイル(DNS/HTTP/5G)",
+   "S": 5,
+   "rank": 22,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q30": {
+   "topic": "ネットワーク応用・モバイル(DNS/HTTP/5G)",
+   "S": 5,
+   "rank": 22,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05h-am1-q11": {
+   "topic": "ネットワーク応用・モバイル(DNS/HTTP/5G)",
+   "S": 5,
+   "rank": 22,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q30": {
+   "topic": "ネットワーク応用・モバイル(DNS/HTTP/5G)",
+   "S": 5,
+   "rank": 22,
+   "label": "全12回中5回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am1-q02": {
+   "topic": "AI・機械学習",
+   "S": 4,
+   "rank": 23,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q02": {
+   "topic": "AI・機械学習",
+   "S": 4,
+   "rank": 23,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q27": {
+   "topic": "AI・機械学習",
+   "S": 4,
+   "rank": 23,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q28": {
+   "topic": "AI・機械学習",
+   "S": 4,
+   "rank": 23,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07h-am1-q30": {
+   "topic": "AI・機械学習",
+   "S": 4,
+   "rank": 23,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q01": {
+   "topic": "AI・機械学習",
+   "S": 4,
+   "rank": 23,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q28": {
+   "topic": "AI・機械学習",
+   "S": 4,
+   "rank": 23,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q27": {
+   "topic": "技術戦略・イノベーション(MOT)",
+   "S": 4,
+   "rank": 24,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q27": {
+   "topic": "技術戦略・イノベーション(MOT)",
+   "S": 4,
+   "rank": 24,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q27": {
+   "topic": "技術戦略・イノベーション(MOT)",
+   "S": 4,
+   "rank": 24,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q27": {
+   "topic": "技術戦略・イノベーション(MOT)",
+   "S": 4,
+   "rank": 24,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q29": {
+   "topic": "生産管理・品質管理(QC)",
+   "S": 3,
+   "rank": 25,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q28": {
+   "topic": "生産管理・品質管理(QC)",
+   "S": 3,
+   "rank": 25,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q28": {
+   "topic": "生産管理・品質管理(QC)",
+   "S": 3,
+   "rank": 25,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q04": {
+   "topic": "メモリ・キャッシュ・記憶階層",
+   "S": 4,
+   "rank": 26,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q4": {
+   "topic": "メモリ・キャッシュ・記憶階層",
+   "S": 4,
+   "rank": 26,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q06": {
+   "topic": "メモリ・キャッシュ・記憶階層",
+   "S": 4,
+   "rank": 26,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q4": {
+   "topic": "メモリ・キャッシュ・記憶階層",
+   "S": 4,
+   "rank": 26,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "book-R03s-am1-q6": {
+   "topic": "メモリ・キャッシュ・記憶階層",
+   "S": 4,
+   "rank": 26,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q4": {
+   "topic": "メモリ・キャッシュ・記憶階層",
+   "S": 4,
+   "rank": 26,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q18": {
+   "topic": "EVM(アーンドバリュー)",
+   "S": 3,
+   "rank": 27,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q18": {
+   "topic": "EVM(アーンドバリュー)",
+   "S": 3,
+   "rank": 27,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q18": {
+   "topic": "EVM(アーンドバリュー)",
+   "S": 3,
+   "rank": 27,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06h-am1-q06": {
+   "topic": "OS・タスク・ジョブ管理",
+   "S": 4,
+   "rank": 28,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "book-R04s-am1-q6": {
+   "topic": "OS・タスク・ジョブ管理",
+   "S": 4,
+   "rank": 28,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q16": {
+   "topic": "OS・タスク・ジョブ管理",
+   "S": 4,
+   "rank": 28,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "book-H29s-am1-q8": {
+   "topic": "OS・タスク・ジョブ管理",
+   "S": 4,
+   "rank": 28,
+   "label": "全12回中4回出題",
+   "exam": "A-1"
+  },
+  "ipa-2024r06a-am1-q07": {
+   "topic": "IE・OR・意思決定",
+   "S": 3,
+   "rank": 29,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q24": {
+   "topic": "IE・OR・意思決定",
+   "S": 3,
+   "rank": 29,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q27": {
+   "topic": "IE・OR・意思決定",
+   "S": 3,
+   "rank": 29,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "book-H30s-am1-q28": {
+   "topic": "IE・OR・意思決定",
+   "S": 3,
+   "rank": 29,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "ipa-2023r05a-am1-q26": {
+   "topic": "マーケティング",
+   "S": 3,
+   "rank": 30,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q27": {
+   "topic": "マーケティング",
+   "S": 3,
+   "rank": 30,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q24": {
+   "topic": "マーケティング",
+   "S": 3,
+   "rank": 30,
+   "label": "全12回中3回出題",
+   "exam": "A-1"
+  },
+  "book-R01a-am1-q6": {
+   "topic": "入出力・補助記憶・RAID",
+   "S": 2,
+   "rank": 31,
+   "label": "全12回中2回出題",
+   "exam": "A-1"
+  },
+  "book-H31s-am1-q21": {
+   "topic": "入出力・補助記憶・RAID",
+   "S": 2,
+   "rank": 31,
+   "label": "全12回中2回出題",
+   "exam": "A-1"
+  },
+  "ipa-2025r07a-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q07": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q24": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q21": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q24": {
+   "topic": "データベース技術",
+   "S": 12,
+   "rank": 1,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q18": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q19": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q20": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q18": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q19": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q20": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q19": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q14": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q18": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q18": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q19": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q20": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q20": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q19": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q20": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q1": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q19": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q20": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q19": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q20": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q12": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q19": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q20": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q18": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q19": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q20": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q19": {
+   "topic": "ネットワーク技術(TCP/IP・LAN)",
+   "S": 12,
+   "rank": 2,
+   "label": "全12回中12回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q23": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q22": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q23": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q23": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q22": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q22": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q22": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q23": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q22": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q22": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q23": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q22": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q23": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q23": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q22": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q23": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q23": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q22": {
+   "topic": "システム開発技術(アジャイル/UML/テスト)",
+   "S": 11,
+   "rank": 3,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q17": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q16": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q15": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q16": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q16": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q14": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q12": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q14": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q15": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q10": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q19": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q12": {
+   "topic": "メールセキュリティ(SPF/DKIM等)",
+   "S": 11,
+   "rank": 4,
+   "label": "全12回中11回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q24": {
+   "topic": "ITサービスマネジメント・可用性",
+   "S": 9,
+   "rank": 5,
+   "label": "全12回中9回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q24": {
+   "topic": "ITサービスマネジメント・可用性",
+   "S": 9,
+   "rank": 5,
+   "label": "全12回中9回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q24": {
+   "topic": "ITサービスマネジメント・可用性",
+   "S": 9,
+   "rank": 5,
+   "label": "全12回中9回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q24": {
+   "topic": "ITサービスマネジメント・可用性",
+   "S": 9,
+   "rank": 5,
+   "label": "全12回中9回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q24": {
+   "topic": "ITサービスマネジメント・可用性",
+   "S": 9,
+   "rank": 5,
+   "label": "全12回中9回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q24": {
+   "topic": "ITサービスマネジメント・可用性",
+   "S": 9,
+   "rank": 5,
+   "label": "全12回中9回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q24": {
+   "topic": "ITサービスマネジメント・可用性",
+   "S": 9,
+   "rank": 5,
+   "label": "全12回中9回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q24": {
+   "topic": "ITサービスマネジメント・可用性",
+   "S": 9,
+   "rank": 5,
+   "label": "全12回中9回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q24": {
+   "topic": "ITサービスマネジメント・可用性",
+   "S": 9,
+   "rank": 5,
+   "label": "全12回中9回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q02": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q04": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q03": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q3": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q16": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q01": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q08": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q16": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q08": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q2": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q14": {
+   "topic": "シングルサインオン・ID連携",
+   "S": 8,
+   "rank": 6,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q13": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q14": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q06": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q15": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q02": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q17": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q15": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q15": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q14": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q16": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q2": {
+   "topic": "TLS・SSL・HTTPS",
+   "S": 8,
+   "rank": 7,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q04": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q09": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q03": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q09": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q06": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q15": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q03": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q10": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q6": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q1": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q5": {
+   "topic": "公開鍵基盤(PKI)・証明書",
+   "S": 8,
+   "rank": 8,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q17": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q14": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q17": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q18": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q13": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q20": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q17": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q12": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q17": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q18": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q17": {
+   "topic": "無線LANセキュリティ",
+   "S": 8,
+   "rank": 9,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q10": {
+   "topic": "ISMS・セキュリティ評価制度",
+   "S": 7,
+   "rank": 10,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q11": {
+   "topic": "ISMS・セキュリティ評価制度",
+   "S": 7,
+   "rank": 10,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q11": {
+   "topic": "ISMS・セキュリティ評価制度",
+   "S": 7,
+   "rank": 10,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q07": {
+   "topic": "ISMS・セキュリティ評価制度",
+   "S": 7,
+   "rank": 10,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q08": {
+   "topic": "ISMS・セキュリティ評価制度",
+   "S": 7,
+   "rank": 10,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q7": {
+   "topic": "ISMS・セキュリティ評価制度",
+   "S": 7,
+   "rank": 10,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q25": {
+   "topic": "ISMS・セキュリティ評価制度",
+   "S": 7,
+   "rank": 10,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q7": {
+   "topic": "ISMS・セキュリティ評価制度",
+   "S": 7,
+   "rank": 10,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q8": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q10": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q09": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q17": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q12": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q22": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q9": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q15": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q22": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q1": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q4": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q8": {
+   "topic": "脆弱性管理・CVSS・診断",
+   "S": 8,
+   "rank": 11,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q13": {
+   "topic": "DNSセキュリティ(DNSSEC等)",
+   "S": 8,
+   "rank": 12,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q16": {
+   "topic": "DNSセキュリティ(DNSSEC等)",
+   "S": 8,
+   "rank": 12,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q01": {
+   "topic": "DNSセキュリティ(DNSSEC等)",
+   "S": 8,
+   "rank": 12,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q04": {
+   "topic": "DNSセキュリティ(DNSSEC等)",
+   "S": 8,
+   "rank": 12,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q13": {
+   "topic": "DNSセキュリティ(DNSSEC等)",
+   "S": 8,
+   "rank": 12,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q05": {
+   "topic": "DNSセキュリティ(DNSSEC等)",
+   "S": 8,
+   "rank": 12,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q18": {
+   "topic": "DNSセキュリティ(DNSSEC等)",
+   "S": 8,
+   "rank": 12,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q11": {
+   "topic": "DNSセキュリティ(DNSSEC等)",
+   "S": 8,
+   "rank": 12,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q15": {
+   "topic": "DNSセキュリティ(DNSSEC等)",
+   "S": 8,
+   "rank": 12,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q6": {
+   "topic": "DNSセキュリティ(DNSSEC等)",
+   "S": 8,
+   "rank": 12,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q04": {
+   "topic": "ハッシュ・メッセージ認証(MAC)",
+   "S": 6,
+   "rank": 13,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q4": {
+   "topic": "ハッシュ・メッセージ認証(MAC)",
+   "S": 6,
+   "rank": 13,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q02": {
+   "topic": "ハッシュ・メッセージ認証(MAC)",
+   "S": 6,
+   "rank": 13,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q03": {
+   "topic": "ハッシュ・メッセージ認証(MAC)",
+   "S": 6,
+   "rank": 13,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q02": {
+   "topic": "ハッシュ・メッセージ認証(MAC)",
+   "S": 6,
+   "rank": 13,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q3": {
+   "topic": "ハッシュ・メッセージ認証(MAC)",
+   "S": 6,
+   "rank": 13,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q8": {
+   "topic": "ハッシュ・メッセージ認証(MAC)",
+   "S": 6,
+   "rank": 13,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q25": {
+   "topic": "システム監査・内部統制",
+   "S": 8,
+   "rank": 14,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q25": {
+   "topic": "システム監査・内部統制",
+   "S": 8,
+   "rank": 14,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q25": {
+   "topic": "システム監査・内部統制",
+   "S": 8,
+   "rank": 14,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q25": {
+   "topic": "システム監査・内部統制",
+   "S": 8,
+   "rank": 14,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q25": {
+   "topic": "システム監査・内部統制",
+   "S": 8,
+   "rank": 14,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q25": {
+   "topic": "システム監査・内部統制",
+   "S": 8,
+   "rank": 14,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q25": {
+   "topic": "システム監査・内部統制",
+   "S": 8,
+   "rank": 14,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q25": {
+   "topic": "システム監査・内部統制",
+   "S": 8,
+   "rank": 14,
+   "label": "全12回中8回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q12": {
+   "topic": "IDS・IPS・WAF・監視",
+   "S": 5,
+   "rank": 15,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q10": {
+   "topic": "IDS・IPS・WAF・監視",
+   "S": 5,
+   "rank": 15,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q10": {
+   "topic": "IDS・IPS・WAF・監視",
+   "S": 5,
+   "rank": 15,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q7": {
+   "topic": "IDS・IPS・WAF・監視",
+   "S": 5,
+   "rank": 15,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q14": {
+   "topic": "IDS・IPS・WAF・監視",
+   "S": 5,
+   "rank": 15,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q13": {
+   "topic": "IDS・IPS・WAF・監視",
+   "S": 5,
+   "rank": 15,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q20": {
+   "topic": "IDS・IPS・WAF・監視",
+   "S": 5,
+   "rank": 15,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q12": {
+   "topic": "IDS・IPS・WAF・監視",
+   "S": 5,
+   "rank": 15,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q01": {
+   "topic": "暗号技術一般・鍵管理",
+   "S": 6,
+   "rank": 16,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q01": {
+   "topic": "暗号技術一般・鍵管理",
+   "S": 6,
+   "rank": 16,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q9": {
+   "topic": "暗号技術一般・鍵管理",
+   "S": 6,
+   "rank": 16,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q03": {
+   "topic": "暗号技術一般・鍵管理",
+   "S": 6,
+   "rank": 16,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q09": {
+   "topic": "暗号技術一般・鍵管理",
+   "S": 6,
+   "rank": 16,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q05": {
+   "topic": "暗号技術一般・鍵管理",
+   "S": 6,
+   "rank": 16,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q10": {
+   "topic": "暗号技術一般・鍵管理",
+   "S": 6,
+   "rank": 16,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q8": {
+   "topic": "暗号技術一般・鍵管理",
+   "S": 6,
+   "rank": 16,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q9": {
+   "topic": "標的型攻撃・APT",
+   "S": 5,
+   "rank": 17,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q10": {
+   "topic": "標的型攻撃・APT",
+   "S": 5,
+   "rank": 17,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q12": {
+   "topic": "標的型攻撃・APT",
+   "S": 5,
+   "rank": 17,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q08": {
+   "topic": "標的型攻撃・APT",
+   "S": 5,
+   "rank": 17,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q03": {
+   "topic": "標的型攻撃・APT",
+   "S": 5,
+   "rank": 17,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q5": {
+   "topic": "ハードウェアセキュリティ(ICカード/TPM)",
+   "S": 6,
+   "rank": 18,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q7": {
+   "topic": "ハードウェアセキュリティ(ICカード/TPM)",
+   "S": 6,
+   "rank": 18,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q14": {
+   "topic": "ハードウェアセキュリティ(ICカード/TPM)",
+   "S": 6,
+   "rank": 18,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q11": {
+   "topic": "ハードウェアセキュリティ(ICカード/TPM)",
+   "S": 6,
+   "rank": 18,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q3": {
+   "topic": "ハードウェアセキュリティ(ICカード/TPM)",
+   "S": 6,
+   "rank": 18,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q3": {
+   "topic": "ハードウェアセキュリティ(ICカード/TPM)",
+   "S": 6,
+   "rank": 18,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q4": {
+   "topic": "ハードウェアセキュリティ(ICカード/TPM)",
+   "S": 6,
+   "rank": 18,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q08": {
+   "topic": "ランサムウェア・マルウェア",
+   "S": 7,
+   "rank": 19,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q05": {
+   "topic": "ランサムウェア・マルウェア",
+   "S": 7,
+   "rank": 19,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q07": {
+   "topic": "ランサムウェア・マルウェア",
+   "S": 7,
+   "rank": 19,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q15": {
+   "topic": "ランサムウェア・マルウェア",
+   "S": 7,
+   "rank": 19,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q13": {
+   "topic": "ランサムウェア・マルウェア",
+   "S": 7,
+   "rank": 19,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q10": {
+   "topic": "ランサムウェア・マルウェア",
+   "S": 7,
+   "rank": 19,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q5": {
+   "topic": "ランサムウェア・マルウェア",
+   "S": 7,
+   "rank": 19,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q14": {
+   "topic": "ランサムウェア・マルウェア",
+   "S": 7,
+   "rank": 19,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q15": {
+   "topic": "ランサムウェア・マルウェア",
+   "S": 7,
+   "rank": 19,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q13": {
+   "topic": "ランサムウェア・マルウェア",
+   "S": 7,
+   "rank": 19,
+   "label": "全12回中7回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q13": {
+   "topic": "インシデント対応・CSIRT",
+   "S": 4,
+   "rank": 20,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q13": {
+   "topic": "インシデント対応・CSIRT",
+   "S": 4,
+   "rank": 20,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q11": {
+   "topic": "インシデント対応・CSIRT",
+   "S": 4,
+   "rank": 20,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q08": {
+   "topic": "インシデント対応・CSIRT",
+   "S": 4,
+   "rank": 20,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q04": {
+   "topic": "ディジタル署名",
+   "S": 4,
+   "rank": 21,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q4": {
+   "topic": "ディジタル署名",
+   "S": 4,
+   "rank": 21,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q3": {
+   "topic": "ディジタル署名",
+   "S": 4,
+   "rank": 21,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q06": {
+   "topic": "ディジタル署名",
+   "S": 4,
+   "rank": 21,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q1": {
+   "topic": "ディジタル署名",
+   "S": 4,
+   "rank": 21,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q8": {
+   "topic": "ディジタル署名",
+   "S": 4,
+   "rank": 21,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q10": {
+   "topic": "認証(多要素・OTP・FIDO・生体)",
+   "S": 4,
+   "rank": 22,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q9": {
+   "topic": "認証(多要素・OTP・FIDO・生体)",
+   "S": 4,
+   "rank": 22,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q11": {
+   "topic": "認証(多要素・OTP・FIDO・生体)",
+   "S": 4,
+   "rank": 22,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q07": {
+   "topic": "認証(多要素・OTP・FIDO・生体)",
+   "S": 4,
+   "rank": 22,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q4": {
+   "topic": "認証(多要素・OTP・FIDO・生体)",
+   "S": 4,
+   "rank": 22,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q07": {
+   "topic": "DoS・DDoS",
+   "S": 6,
+   "rank": 23,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q04": {
+   "topic": "DoS・DDoS",
+   "S": 6,
+   "rank": 23,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q06": {
+   "topic": "DoS・DDoS",
+   "S": 6,
+   "rank": 23,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q4": {
+   "topic": "DoS・DDoS",
+   "S": 6,
+   "rank": 23,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q13": {
+   "topic": "DoS・DDoS",
+   "S": 6,
+   "rank": 23,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q6": {
+   "topic": "DoS・DDoS",
+   "S": 6,
+   "rank": 23,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q18": {
+   "topic": "DoS・DDoS",
+   "S": 6,
+   "rank": 23,
+   "label": "全12回中6回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q6": {
+   "topic": "ファイアウォール・境界防御",
+   "S": 5,
+   "rank": 24,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q5": {
+   "topic": "ファイアウォール・境界防御",
+   "S": 5,
+   "rank": 24,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q17": {
+   "topic": "ファイアウォール・境界防御",
+   "S": 5,
+   "rank": 24,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q6": {
+   "topic": "ファイアウォール・境界防御",
+   "S": 5,
+   "rank": 24,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q20": {
+   "topic": "ファイアウォール・境界防御",
+   "S": 5,
+   "rank": 24,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q16": {
+   "topic": "ファイアウォール・境界防御",
+   "S": 5,
+   "rank": 24,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q18": {
+   "topic": "ファイアウォール・境界防御",
+   "S": 5,
+   "rank": 24,
+   "label": "全12回中5回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q16": {
+   "topic": "クロスサイトリクエストフォージェリ(CSRF)",
+   "S": 3,
+   "rank": 25,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q01": {
+   "topic": "クロスサイトリクエストフォージェリ(CSRF)",
+   "S": 3,
+   "rank": 25,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q10": {
+   "topic": "クロスサイトリクエストフォージェリ(CSRF)",
+   "S": 3,
+   "rank": 25,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q01": {
+   "topic": "OSコマンドインジェクション",
+   "S": 4,
+   "rank": 26,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q1": {
+   "topic": "OSコマンドインジェクション",
+   "S": 4,
+   "rank": 26,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q2": {
+   "topic": "OSコマンドインジェクション",
+   "S": 4,
+   "rank": 26,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q12": {
+   "topic": "OSコマンドインジェクション",
+   "S": 4,
+   "rank": 26,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q10": {
+   "topic": "IoT・制御システムセキュリティ",
+   "S": 3,
+   "rank": 27,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q8": {
+   "topic": "IoT・制御システムセキュリティ",
+   "S": 3,
+   "rank": 27,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q2": {
+   "topic": "IoT・制御システムセキュリティ",
+   "S": 3,
+   "rank": 27,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q17": {
+   "topic": "SQLインジェクション",
+   "S": 3,
+   "rank": 28,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q17": {
+   "topic": "SQLインジェクション",
+   "S": 3,
+   "rank": 28,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q17": {
+   "topic": "SQLインジェクション",
+   "S": 3,
+   "rank": 28,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q2": {
+   "topic": "Webアプリの脆弱性・対策一般",
+   "S": 3,
+   "rank": 29,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q2": {
+   "topic": "Webアプリの脆弱性・対策一般",
+   "S": 3,
+   "rank": 29,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q15": {
+   "topic": "Webアプリの脆弱性・対策一般",
+   "S": 3,
+   "rank": 29,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07h-am2-q12": {
+   "topic": "セキュリティ管理・ポリシー・制度",
+   "S": 3,
+   "rank": 30,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q09": {
+   "topic": "セキュリティ管理・ポリシー・制度",
+   "S": 3,
+   "rank": 30,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q9": {
+   "topic": "セキュリティ管理・ポリシー・制度",
+   "S": 3,
+   "rank": 30,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05a-am2-q25": {
+   "topic": "アクセス制御・認可",
+   "S": 2,
+   "rank": 31,
+   "label": "全12回中2回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q25": {
+   "topic": "アクセス制御・認可",
+   "S": 2,
+   "rank": 31,
+   "label": "全12回中2回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q07": {
+   "topic": "共通鍵・ブロック暗号",
+   "S": 4,
+   "rank": 32,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q19": {
+   "topic": "共通鍵・ブロック暗号",
+   "S": 4,
+   "rank": 32,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q7": {
+   "topic": "共通鍵・ブロック暗号",
+   "S": 4,
+   "rank": 32,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-H31s-am2-q16": {
+   "topic": "共通鍵・ブロック暗号",
+   "S": 4,
+   "rank": 32,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q1": {
+   "topic": "共通鍵・ブロック暗号",
+   "S": 4,
+   "rank": 32,
+   "label": "全12回中4回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q23": {
+   "topic": "法規・契約・知的財産",
+   "S": 2,
+   "rank": 33,
+   "label": "全12回中2回出題",
+   "exam": "A-2"
+  },
+  "ipa-2023r05h-am2-q23": {
+   "topic": "法規・契約・知的財産",
+   "S": 2,
+   "rank": 33,
+   "label": "全12回中2回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06h-am2-q11": {
+   "topic": "クラウド・コンテナ・仮想化セキュリティ",
+   "S": 3,
+   "rank": 34,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q12": {
+   "topic": "クラウド・コンテナ・仮想化セキュリティ",
+   "S": 3,
+   "rank": 34,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-R03s-am2-q11": {
+   "topic": "クラウド・コンテナ・仮想化セキュリティ",
+   "S": 3,
+   "rank": 34,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q02": {
+   "topic": "公開鍵暗号・鍵交換",
+   "S": 2,
+   "rank": 35,
+   "label": "全12回中2回出題",
+   "exam": "A-2"
+  },
+  "ipa-2024r06a-am2-q09": {
+   "topic": "公開鍵暗号・鍵交換",
+   "S": 2,
+   "rank": 35,
+   "label": "全12回中2回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q6": {
+   "topic": "公開鍵暗号・鍵交換",
+   "S": 2,
+   "rank": 35,
+   "label": "全12回中2回出題",
+   "exam": "A-2"
+  },
+  "ipa-2025r07a-am2-q25": {
+   "topic": "リスクアセスメント・リスク対応",
+   "S": 2,
+   "rank": 36,
+   "label": "全12回中2回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q9": {
+   "topic": "リスクアセスメント・リスク対応",
+   "S": 2,
+   "rank": 36,
+   "label": "全12回中2回出題",
+   "exam": "A-2"
+  },
+  "book-R01a-am2-q11": {
+   "topic": "セッション管理・Cookie",
+   "S": 3,
+   "rank": 37,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q11": {
+   "topic": "セッション管理・Cookie",
+   "S": 3,
+   "rank": 37,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q5": {
+   "topic": "セッション管理・Cookie",
+   "S": 3,
+   "rank": 37,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-R04s-am2-q11": {
+   "topic": "パスワード攻撃・攻撃手法一般",
+   "S": 3,
+   "rank": 38,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-H30s-am2-q13": {
+   "topic": "パスワード攻撃・攻撃手法一般",
+   "S": 3,
+   "rank": 38,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  },
+  "book-H29s-am2-q11": {
+   "topic": "パスワード攻撃・攻撃手法一般",
+   "S": 3,
+   "rank": 38,
+   "label": "全12回中3回出題",
+   "exam": "A-2"
+  }
+ }
+}

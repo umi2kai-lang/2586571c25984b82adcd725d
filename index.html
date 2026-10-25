@@ -60,6 +60,7 @@
           <button class="seg__btn is-on" role="radio" aria-checked="true" data-mode="a1">A-1 共通知識</button>
           <button class="seg__btn" role="radio" aria-checked="false" data-mode="a2">A-2 専門</button>
           <button class="seg__btn" role="radio" aria-checked="false" data-mode="past">過去問(年度別)</button>
+          <button class="seg__btn" role="radio" aria-checked="false" data-mode="hindo" id="mode-hindo" hidden>頻出順</button>
           <button class="seg__btn" role="radio" aria-checked="false" data-mode="weak">苦手優先(自動)</button>
           <button class="seg__btn" role="radio" aria-checked="false" data-mode="review">間違えた問題の復習</button>
           <button class="seg__btn" role="radio" aria-checked="false" data-mode="all">全問ランダム</button>
@@ -70,6 +71,13 @@
         <select id="past-sitting" class="select" aria-label="過去問の回・区分">
           <option value="all">すべての過去問からランダム</option>
         </select>
+      </div>
+      <div class="field" id="hindo-field" hidden>
+        <span class="field__label">区分</span>
+        <div class="seg" id="hindo-seg" role="radiogroup" aria-label="頻出順の区分">
+          <button class="seg__btn is-on" role="radio" aria-checked="true" data-hexam="A-2">A-2 専門</button>
+          <button class="seg__btn" role="radio" aria-checked="false" data-hexam="A-1">A-1 共通</button>
+        </div>
       </div>
       <div class="field">
         <span class="field__label">出題数</span>
@@ -98,6 +106,7 @@
       <div class="q-meta">
         <span class="chip" id="q-exam">A-2</span>
         <span class="chip chip--cat" id="q-cat">カテゴリ</span>
+        <span class="chip chip--hindo" id="q-hindo" hidden></span>
       </div>
       <p class="q-text" id="q-text"></p>
       <div class="q-figure" id="q-figure" hidden></div>
