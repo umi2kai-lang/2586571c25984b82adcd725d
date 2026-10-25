@@ -84,6 +84,9 @@ function init() {
     .then(function (data) {
       QUESTIONS = (data && data.questions) || [];
       QUESTIONS.forEach(function (q) { QById[q.id] = q; });
+      return loadBookPrivate();
+    })
+    .then(function () {
       return loadCards();
     })
     .then(function () {
@@ -93,6 +96,37 @@ function init() {
       $('#main').insertAdjacentHTML('afterbegin',
         '<div class="card"><p>問題データを読み込めませんでした。ページを再読み込みしてください。</p></div>');
       console.error(err);
+    });
+}
+
+// 書籍（インプレス教科書）購入者特典データを任意読込する。
+// data/book-private.json が無い（404）場合は静かにスキップし、本体は通常どおり動作する。
+// explanations[] = 既存問題へ書籍解説を付与 / questions[] = アプリ未収録の午前問題を追加。
+function loadBookPrivate() {
+  return fetch('data/book-private.json', { cache: 'no-store' })
+    .then(function (r) {
+      if (!r.ok) throw new Error('book-private ' + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      if (!data) return;
+      (data.explanations || []).forEach(function (e) {
+        var q = QById[e.id];
+        if (q) {
+          q.explanation_book = e.explanation_book;
+          q.explanation_book_source = e.source || '出典：インプレス教科書（購入者特典）';
+        }
+      });
+      (data.questions || []).forEach(function (q) {
+        if (q && q.id && !QById[q.id]) {
+          q.isBook = true;
+          QUESTIONS.push(q);
+          QById[q.id] = q;
+        }
+      });
+    })
+    .catch(function () {
+      // 特典ファイルが無い環境では何もしない(任意データ)
     });
 }
 
@@ -548,8 +582,9 @@ function feedbackSkeleton() {
   // renderQuestion で毎回クリアするため、固定の内側HTMLを再設定
   return '' +
     '<div class="feedback__head" id="fb-head"></div>' +
-    '<div class="feedback__block"><h3 class="feedback__h">解説 <span class="feedback__own">独自作成</span></h3><p id="fb-explanation"></p></div>' +
+    '<div class="feedback__block"><h3 class="feedback__h">解説 <span class="feedback__own" id="fb-expl-badge">独自作成</span></h3><p id="fb-explanation"></p></div>' +
     '<div class="feedback__block" id="fb-notes-block" hidden><h3 class="feedback__h">各選択肢について</h3><ul id="fb-notes"></ul></div>' +
+    '<div class="feedback__block" id="fb-book-block" hidden><h3 class="feedback__h">書籍の解説 <span class="feedback__own feedback__book">インプレス教科書（購入者特典）</span></h3><p id="fb-book-explanation"></p><div class="feedback__source" id="fb-book-source"></div></div>' +
     '<div class="feedback__source" id="fb-source"></div>' +
     '<div class="next-wrap"><button class="btn btn--primary btn--block" id="fb-next">次へ</button></div>';
 }
@@ -579,6 +614,21 @@ function answer(chosen) {
   head.className = 'feedback__head ' + (ok ? 'ok' : 'ng');
 
   $('#fb-explanation').textContent = q.explanation || '';
+  // 書籍問題の場合は解説の出所バッジを書き替える
+  var badge = $('#fb-expl-badge');
+  if (badge) badge.textContent = q.isBook ? 'インプレス教科書（購入者特典）' : '独自作成';
+
+  // 書籍（インプレス教科書 購入者特典）の解説を既存解説の下に表示する
+  var bookBlock = $('#fb-book-block');
+  if (bookBlock) {
+    if (q.explanation_book) {
+      $('#fb-book-explanation').textContent = q.explanation_book;
+      $('#fb-book-source').textContent = q.explanation_book_source || '出典：インプレス教科書（購入者特典）';
+      bookBlock.hidden = false;
+    } else {
+      bookBlock.hidden = true;
+    }
+  }
 
   // 各選択肢の誤りメモ(空でないものだけ)
   var notes = q.choiceNotes || [];
