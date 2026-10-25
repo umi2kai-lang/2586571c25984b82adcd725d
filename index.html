@@ -224,11 +224,42 @@
       <button class="btn btn--danger btn--block" id="st-reset">記録をリセット</button>
     </div>
   </section>
+
+  <!-- 頻出ランキング(全論点) -->
+  <section id="view-ranking" class="view" hidden aria-label="頻出ランキング">
+    <div class="card rank-intro">
+      <h2 class="card__h">頻出論点ランキング</h2>
+      <p class="muted" style="font-size:12px;margin:0 0 10px">IPA公表の過去問 全12回(平成29春〜令和7秋)を論点ごとに集計し、出題回数と新しさで順位づけしました。<b>全論点を掲載</b>（出題0回・1回の論点も件数つきで表示）。これは過去の傾向の統計であり、今後の出題を保証するものではありません。</p>
+      <div class="field">
+        <span class="field__label">区分</span>
+        <div class="seg" id="rank-seg" role="radiogroup" aria-label="ランキングの区分">
+          <button class="seg__btn is-on" role="radio" aria-checked="true" data-rexam="A-2">A-2 専門</button>
+          <button class="seg__btn" role="radio" aria-checked="false" data-rexam="A-1">A-1 共通</button>
+        </div>
+      </div>
+      <p class="rank-summary muted" id="rank-summary"></p>
+    </div>
+    <div class="card rank-tablewrap">
+      <table class="rank-table" id="rank-table">
+        <thead>
+          <tr>
+            <th class="rk">順位</th>
+            <th class="tp">論点</th>
+            <th class="num">出題<br>(12回中)</th>
+            <th class="num">直近3年<br>R5〜R7</th>
+            <th class="num">総出題<br>数</th>
+          </tr>
+        </thead>
+        <tbody id="rank-tbody"></tbody>
+      </table>
+    </div>
+  </section>
 </main>
 
 <nav class="tabbar" aria-label="画面切り替え">
   <button class="tab is-on" data-view="home"><span class="tab__ico">🏠</span>ホーム</button>
   <button class="tab" data-view="textbook"><span class="tab__ico">📘</span>教科書</button>
+  <button class="tab" data-view="ranking" id="tab-ranking" hidden><span class="tab__ico">🏆</span>頻出</button>
   <button class="tab" data-view="stats"><span class="tab__ico">📊</span>統計</button>
 </nav>
 

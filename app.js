@@ -69,7 +69,8 @@ var ui = {
   mode: 'a1',
   count: 10,
   sitting: 'all',  // 過去問モードで選択中の回・区分キー ('all' | 'year|term|section')
-  hexam: 'A-2'     // 頻出順モードで選択中の区分 ('A-1' | 'A-2')
+  hexam: 'A-2',    // 頻出順モードで選択中の区分 ('A-1' | 'A-2')
+  rexam: 'A-2'     // 頻出ランキング画面で選択中の区分 ('A-1' | 'A-2')
 };
 
 // 頻出順データ(購入者特典由来のため gitignore 配下)。data/hindo-private.json から任意読込。
@@ -179,9 +180,19 @@ function bootUI() {
   // 教科書(図解カード)
   setupTextbook();
 
-  // 頻出順データがあるときだけ「頻出順」モードを提示する。
+  // 頻出順データがあるときだけ「頻出順」モードと「頻出」ランキングタブを提示する。
   var hindoBtn = $('#mode-hindo');
   if (hindoBtn && HINDO) hindoBtn.hidden = false;
+  var rankTab = $('#tab-ranking');
+  if (rankTab && HINDO) rankTab.hidden = false;
+  // ランキング画面の区分セレクト(A-1 / A-2)
+  $all('#rank-seg .seg__btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      setSeg('#rank-seg', b);
+      ui.rexam = b.dataset.rexam;
+      renderRanking();
+    });
+  });
 
   // モード選択
   $all('#mode-seg .seg__btn').forEach(function (b) {
@@ -293,8 +304,10 @@ function updateModeNote() {
   if (ui.mode === 'hindo' && HINDO) {
     var sec = HINDO.sections[ui.hexam];
     var n = sec ? hindoOrder(ui.hexam).length : 0;
-    var tn = sec ? sec.topics.length : 0;
-    note += ' 現在 ' + ui.hexam + ' は ' + tn + ' 論点・' + n + ' 問が対象です。';
+    // 出題対象はカットオフ(S≥2)を満たす論点のみ。全論点数はランキング画面で確認できる。
+    var tn = sec ? (typeof sec.quizTopics === 'number' ? sec.quizTopics
+      : sec.topics.filter(function (t) { return t.S >= 2; }).length) : 0;
+    note += ' 現在 ' + ui.hexam + ' は ' + tn + ' 論点・' + n + ' 問が対象です（頻出タブで全論点のランキングを確認できます）。';
   }
   $('#mode-note').textContent = note;
 }
@@ -305,7 +318,8 @@ function showView(name) {
   $all('.view').forEach(function (v) { v.hidden = true; });
   var map = {
     home: '#view-home', quiz: '#view-quiz', result: '#view-result',
-    stats: '#view-stats', textbook: '#view-textbook', card: '#view-card'
+    stats: '#view-stats', textbook: '#view-textbook', card: '#view-card',
+    ranking: '#view-ranking'
   };
   var el = $(map[name]);
   if (el) el.hidden = false;
@@ -313,12 +327,14 @@ function showView(name) {
   // タブのハイライト(quiz/result はホーム扱い、card は教科書扱い)
   var tabFor = (name === 'stats') ? 'stats'
     : (name === 'textbook' || name === 'card') ? 'textbook'
+    : (name === 'ranking') ? 'ranking'
     : 'home';
   $all('.tab').forEach(function (t) { t.classList.toggle('is-on', t.dataset.view === tabFor); });
 
   if (name === 'home') { renderHome(); updateModeNote(); }
   if (name === 'stats') renderStats();
   if (name === 'textbook') renderTextbook();
+  if (name === 'ranking') renderRanking();
   window.scrollTo(0, 0);
 }
 
@@ -986,6 +1002,58 @@ function renderTextbook() {
   $all('#tb-list .tb-item').forEach(function (el) {
     el.addEventListener('click', function () { openCard(parseInt(el.dataset.id, 10)); });
   });
+}
+
+/* ===== 頻出ランキング(全論点) ===== */
+
+// 頻出ランキング画面を描画する。sec.topics は全論点(0回・1回も含む)を score 降順・rank 連番で
+// 保持している。各行に 順位・論点・出題回数(12回中)と出題率・直近3年・総出題数を表示する。
+function renderRanking() {
+  if (!HINDO) return;
+  // 区分セレクトの選択状態を ui.rexam に合わせる
+  $all('#rank-seg .seg__btn').forEach(function (b) {
+    var on = (b.dataset.rexam === ui.rexam);
+    b.classList.toggle('is-on', on);
+    b.setAttribute('aria-checked', on ? 'true' : 'false');
+  });
+
+  var sec = HINDO.sections[ui.rexam];
+  var tbody = $('#rank-tbody');
+  var summary = $('#rank-summary');
+  if (!sec || !Array.isArray(sec.topics)) {
+    if (tbody) tbody.innerHTML = '<tr><td colspan="5" class="muted">データがありません。</td></tr>';
+    if (summary) summary.textContent = '';
+    return;
+  }
+  var topics = sec.topics;
+  var N = HINDO.totalSessions || 12;
+  var NR = HINDO.recentSessions || 6;
+
+  var quiz = 0, one = 0, zero = 0;
+  topics.forEach(function (t) {
+    if (t.S >= 2) quiz++; else if (t.S === 1) one++; else zero++;
+  });
+  if (summary) {
+    summary.textContent = ui.rexam + '：全 ' + topics.length + ' 論点'
+      + '（出題対象 S≥2 … ' + quiz + ' 論点／1回のみ … ' + one + ' 論点／0回 … ' + zero + ' 論点）。';
+  }
+
+  var rows = topics.map(function (t) {
+    var pct = Math.round((t.S / N) * 100);
+    var cut = t.S >= 2;
+    var rkClass = cut ? 'rk' : 'rk rk--out';
+    // 出題0回・1回の論点は淡色＋「出題対象外」を補足し、ランキング上は件数のみ示す。
+    var tag = cut ? '' : '<span class="rank-out">出題対象外</span>';
+    return '<tr class="' + (cut ? '' : 'is-out') + '">'
+      + '<td class="' + rkClass + '">' + t.rank + '</td>'
+      + '<td class="tp"><span class="rank-topic">' + escapeHTML(t.topic) + '</span>'
+        + (t.reuse ? '<span class="rank-reuse">再出題あり</span>' : '') + tag + '</td>'
+      + '<td class="num">' + t.S + '/' + N + '<br><span class="sub">' + pct + '%</span></td>'
+      + '<td class="num">' + t.recentQ + '問<br><span class="sub">' + t.R + '/' + NR + '回</span></td>'
+      + '<td class="num">' + t.totalQ + '</td>'
+      + '</tr>';
+  }).join('');
+  tbody.innerHTML = rows;
 }
 
 function openCard(id) {

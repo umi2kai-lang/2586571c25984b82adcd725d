@@ -6,7 +6,7 @@
  *   → これにより、Android Chrome 等で古い版が居座る問題を避ける。
  * その他の静的ファイル(アイコン・manifest 等)はキャッシュ優先(cache-first)。
  */
-var CACHE = 'scapp-v10';
+var CACHE = 'scapp-v11';
 var CORE = [
   './',
   './index.html',
