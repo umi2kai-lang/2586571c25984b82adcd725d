@@ -659,6 +659,10 @@ function renderQuestion() {
 
   // 設問の図版(図・表・数式・プログラム)。IPA公式PDFから切り出した画像を表示する。
   renderFigures($('#q-figure'), q.image);
+  // 数式・図の後に続く本文も、元PDFと同じ順序で表示する。
+  var afterFigure = $('#q-after-figure');
+  afterFigure.textContent = q.questionAfterImage || '';
+  afterFigure.hidden = !q.questionAfterImage;
 
   var box = $('#q-choices');
   box.innerHTML = '';
@@ -672,7 +676,7 @@ function renderQuestion() {
       // 選択肢自体が図・数式の場合は画像で表示する。
       body += '<span class="choice__fig"><img class="qimg" src="' + escapeHTML(choiceImgs[i]) +
         '" alt="選択肢' + CHOICE_KEYS[i] + 'の図" loading="lazy"></span>';
-    } else {
+    } else if (c !== CHOICE_KEYS[i]) {
       body += '<span>' + escapeHTML(c) + '</span>';
     }
     btn.innerHTML = body;
