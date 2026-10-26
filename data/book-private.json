@@ -8031,10 +8031,10 @@
       "category": "テクノロジ",
       "question": "図の回路が実現する論理式はどれか。ここで，論理式中の“・”は論理積，“＋”は論理和を表す。",
       "choices": [
-        "ア",
-        "イ",
-        "ウ",
-        "エ"
+        "F＝A",
+        "F＝B",
+        "F＝A・B",
+        "F＝A＋B"
       ],
       "answer": 1,
       "explanation": "図の回路にA＝0，B＝0を入力するとF＝0となります。同様にA＝0，B＝1ではF＝1，A＝1，B＝0 ではF＝0，A＝1，B＝1ではF＝1となります。この結果はAには関係なく常にBと一致するので，論理式としてはF＝Bとなります。したがって，イが正解です。",
@@ -8056,13 +8056,7 @@
       "answer_source": "IPA公表の解答例PDFと直接突合。問題文・選択肢は購入者特典PDFとIPA原本を照合。",
       "verified": true,
       "reviewNote": "問題文・選択肢は購入者特典PDFの文字層と目視、IPA原本PDFのOCRで照合。図・表・数式の画像は必要な箇所のみ保持。正答はIPA公式解答例と再照合済み。",
-      "image": "data/book-img/book-H29s-am1-q7-figure-v13.webp",
-      "choiceImages": [
-        "data/book-img/book-H29s-am1-q7-choice-0-v13.webp",
-        "data/book-img/book-H29s-am1-q7-choice-1-v13.webp",
-        "data/book-img/book-H29s-am1-q7-choice-2-v13.webp",
-        "data/book-img/book-H29s-am1-q7-choice-3-v13.webp"
-      ]
+      "image": "data/book-img/book-H29s-am1-q7-figure-v13.webp"
     },
     {
       "id": "book-H29s-am1-q8",
