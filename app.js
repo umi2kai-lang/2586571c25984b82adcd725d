@@ -643,6 +643,7 @@ function renderQuestion() {
   $('#q-exam').textContent = q.exam;
   $('#q-cat').textContent = q.category;
   $('#q-text').textContent = q.question;
+  $('#q-source').textContent = questionSourceLabel(q);
 
   // 頻出順モードでは、論点名と「全12回中△回出題」を表示する。
   var hchip = $('#q-hindo');
@@ -767,6 +768,17 @@ function answer(chosen) {
   next.addEventListener('click', nextQuestion);
   next.focus();
   fb.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// 回答前から全モードで表示する、短い出典ラベル。
+function questionSourceLabel(q) {
+  var src = q.source || {};
+  if (src.type === 'original' || src.type === 'drill') return '独自';
+  if (src.year && src.term && src.section && src.qno) {
+    return src.year.replace(/年度$/, '年') + src.term.replace(/期$/, '') +
+      ' ' + src.section + ' 問' + src.qno;
+  }
+  return src.label || '出典不明';
 }
 
 function sourceText(src) {

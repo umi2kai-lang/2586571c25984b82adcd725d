@@ -151,6 +151,9 @@ body {
 .quiz-top__count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 
 /* Quiz card */
+.q-source { margin: 0 0 12px; padding: 10px 12px; border-left: 4px solid #2563eb;
+  border-radius: 6px; background: #eff6ff; color: #1e3a8a; font-size: 16px;
+  font-weight: 700; line-height: 1.5; overflow-wrap: anywhere; }
 .q-meta { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
 .chip { font-size: 11px; padding: 3px 9px; border-radius: 999px; background: #e8eef6; color: var(--navy); font-weight: 700; }
 .chip--cat { background: #f0e6ee; color: var(--accent); }
